@@ -1,0 +1,50 @@
+.event-about {
+  &__inner {
+    margin-top: 110px;
+  }
+}
+
+.event-result {
+  margin-top: 12px;
+  margin-bottom: 107px;
+
+  &__title {
+    margin-top: 0;
+  }
+
+  &__inner {
+    margin-top: 116px;
+  }
+
+  &__content-item {
+    &--cities {
+      &::before {
+        background-image: url(../images/icons/footer-pointer.svg);
+      }
+
+      &::after {
+        content: "городов";
+      }
+    }
+
+    &--people {
+      &::before {
+        background-image: url(../images/icons/people.svg);
+      }
+
+      &::after {
+        content: "участников";
+      }
+    }
+
+    &--reports {
+      &::before {
+        background-image: url(../images/icons/brain.svg);
+      }
+
+      &::after {
+        content: "докладов";
+      }
+    }
+  }
+}

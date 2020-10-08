@@ -1,0 +1,33 @@
+.ie-active {
+
+	.spec__content,
+	.past-events__inner {
+		margin-left: -32px;
+	}
+
+	.vertical-item {
+		margin-left: 32px;
+	}
+
+	.read-more {
+		display: inline-flex;
+		line-height: 1;
+		margin-top: 32px;
+	}
+
+	.recomendations__grid {
+		display: flex;
+		justify-content: flex-end;
+		flex-wrap: wrap;
+	}
+
+	.recomendations__link {
+		flex: 0 0 325px;
+		margin: 16px 0 0 16px;
+	}
+
+	.recomendations__link-title {
+		max-width: 100%;
+		word-wrap: break-word;
+	}
+}

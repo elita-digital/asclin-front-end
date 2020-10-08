@@ -1,0 +1,163 @@
+.registration,
+.settings {
+	display: block;
+
+	&__input-wrapper {
+		flex: 1 1 100%;
+		display: block;
+		margin-top: 20px;
+		min-height: 72px;
+
+		&--2 {
+			flex: 0 1 calc(100%/2 - 10px);
+		}
+
+		&--3 {
+			flex: 0 1 calc(100%/3 - 10px);
+		}
+	}
+
+	&__comment-field {
+		min-height: 220px;
+	}
+
+	&__checkbox {
+		margin-left: 40px;
+		max-width: 77%;
+	}
+
+	&__btn {
+		margin-top: 28px;
+		max-width: 260px;
+	}
+}
+
+.settings {
+	margin-top: 0;
+
+	&__top-row {
+		align-items: stretch;
+	}
+
+	&__input-wrapper--picture {
+		position: relative;
+		flex: 0 0 380px;
+		margin-left: -50px;
+		margin-top: -125px;
+		flex-direction: column;
+		align-items: flex-end;
+		justify-content: center;
+		cursor: pointer;
+
+		&:hover {
+			.settings__picture-descr {
+				text-decoration: underline;
+			}
+		}
+	}
+
+	&__user-photo {
+		position: absolute;
+		height: 0;
+		width: 0;
+		opacity: 0;
+		z-index: 0;
+	}
+
+	&__picture-descr {
+		display: block;
+		text-align: center;
+		margin: 0 auto;
+		text-transform: uppercase;
+		font-weight: 600;
+		font-size: 20px;
+		line-height: 1.35;
+		color: $text;
+		padding: 10px 0;
+		transition: all 0.26s;
+	}
+
+	&__uploaded-photo {
+		position: relative;
+		overflow: hidden;
+		display: block;
+		width: 380px;
+		height: 290px;
+		font-size: 0;
+		border-radius: 40px;
+		background-color: #fff;
+		text-align: center;
+		object-fit: cover;
+
+		&::before,
+		&::after {
+			content: '';
+			position: absolute;
+			height: 100%;
+			width: 100%;
+			top: 0;
+			left: 0;
+			background-color: #fff;
+		}
+
+		&::before {
+			border-radius: 40px;
+			background-image: url(../../images/icons/nopicture.svg);
+			@include bg;
+			z-index: 1;
+		}
+	}
+
+	&__top-box {
+		flex: 1 1 100%;
+		margin-left: 55px;
+	}
+
+	&__workplace-wrapper,
+	&__workplace {
+		margin-top: 32px;
+	}
+
+	&__add-workplace {
+		user-select: none;
+		display: block;
+		margin: 20px auto;
+		background-color: transparent;
+		border: none;
+		font-weight: 600;
+		font-size: 14px;
+		line-height: 1.93;
+		text-transform: uppercase;
+		padding-left: 30px;
+		color: $text;
+		position: relative;
+
+		&::before {
+			content: '+';
+			display: block;
+			position: absolute;
+			height: 20px;
+			width: 20px;
+			top: 50%;
+			left: 0;
+			transform: translateY(-50%);
+			font-size: 30px;
+			line-height: 0.6;
+		}
+	}
+
+	&__button-hint {
+		position: fixed;
+		padding: 5px;
+		margin: -15px auto auto 10px;
+		border-radius: 5px;
+		box-shadow: 0 0 1px 2px rgba(0, 0, 0, .3);
+		background-color: #fff;
+		z-index: 100500;
+		max-width: 250px;
+		display: none;
+		top: 50%;
+		left: 50%;
+		transform: translate(-50%, -50%);
+	}
+}

@@ -1,0 +1,119 @@
+.horizontal-item {
+  padding: 18px 30px 18px 21px;
+  background-color: #ffffff;
+  align-items: center;
+  justify-content: space-between;
+  border-radius: 30px;
+  text-transform: uppercase;
+  position: relative;
+
+  &__pic {
+    height: 177px;
+    flex: 0 0 229px;
+    border-radius: 30px;
+    object-fit: cover;
+  }
+
+  &__box {
+    margin-left: 30px;
+    color: $main;
+    flex: 1 1 auto;
+  }
+
+  &__title {
+    font-weight: bold;
+    font-size: 18px;
+    line-height: 22px;
+  }
+
+  &__author {
+    margin-top: 23px;
+    font-weight: 300;
+    line-height: 20px;
+  }
+
+  &__icons {
+    margin-top: 25px;
+  }
+
+  &__like,
+  &__comment {
+    display: inline-block;
+    font-weight: 300;
+    font-size: 16px;
+    line-height: 20px;
+    padding-left: 45px;
+    position: relative;
+
+    &+& {
+      margin-left: 20px;
+    }
+
+    &::before {
+      content: '';
+      position: absolute;
+      height: 23px;
+      width: 40px;
+      top: 50%;
+      left: 0;
+      transform: translateY(-50%);
+      @include bg;
+      background-position: left center;
+    }
+  }
+
+  &__like {
+    &::before {
+      background-image: url(../images/icons/heart.svg);
+    }
+
+  }
+
+  &__comment {
+    &::before {
+      background-image: url(../images/icons/message.svg);
+    }
+
+  }
+
+  &__date {
+    font-style: italic;
+    font-weight: 500;
+    font-size: 8px;
+    line-height: 10px;
+    margin-top: 5px;
+  }
+
+  &__redact {
+    display: block;
+    margin-top: 37px;
+    margin-bottom: auto;
+    font-style: italic;
+    font-weight: 500;
+    font-size: 8px;
+    line-height: 10px;
+
+    &:hover,
+    &:focus {
+      text-decoration: underline;
+    }
+  }
+
+  &__link {
+    position: absolute;
+    font-size: 0;
+    height: 40%;
+    width: 19px;
+    @include bg;
+    background-image: url(../images/icons/arrow-goto.svg);
+    top: 50%;
+    right: 30px;
+    transform: translateY(-50%);
+    transition: all 0.26s;
+
+    &:hover,
+    &:focus {
+      transform: translate(50%, -50%);
+    }
+  }
+}

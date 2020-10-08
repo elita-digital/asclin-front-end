@@ -1,0 +1,47 @@
+.about {
+	margin-bottom: 90px;
+
+	&__counter {
+		margin-top: 150px;
+	}
+
+	&__counter-item {
+		&--conf {
+			&::before {
+				background-image: url(../images/icons/people-group.svg);
+			}
+
+			&::after {
+				content: "конференций";
+			}
+		}
+
+		&--members {
+			&::before {
+				background-image: url(../images/icons/people.svg);
+			}
+
+			&::after {
+				content: "участников";
+			}
+		}
+
+		&--partners {
+			&::before {
+				background-image: url(../images/icons/partners.svg);
+			}
+
+			&::after {
+				content: "партнеров";
+			}
+		}
+	}
+
+	&__item {
+		margin-top: 85px;
+	}
+
+	&__bottom {
+		margin-top: 140px;
+	}
+}

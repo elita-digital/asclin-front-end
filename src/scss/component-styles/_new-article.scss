@@ -1,0 +1,114 @@
+.new-article {
+	margin-bottom: 160px;
+
+	&__subtitle {
+		text-align: center;
+		font-weight: bold;
+		font-size: 30px;
+		line-height: 37px;
+		color: $main;
+		margin-top: 112px;
+	}
+
+	&__inner {
+		flex-wrap: wrap;
+		position: relative;
+		padding: 174px 137px 28px 36px;
+	}
+
+	&__input-wrapper {
+		display: block;
+		flex: 1 0 100%;
+		text-align: right;
+		margin-top: 40px;
+
+		&--image {
+			position: absolute;
+			right: 50px;
+			top: 70px;
+			z-index: 2;
+			flex: 0 0 412px;
+			cursor: pointer;
+			transition: all 0.26s;
+			max-width: 100%;
+
+			&.go-back {
+				opacity: 0.3;
+				z-index: 0;
+			}
+
+			&:hover,
+			&:focus {
+				z-index: 2;
+
+				.new-article__descr {
+					text-decoration: none;
+				}
+			}
+		}
+
+		&--small {
+			flex: 0 1 400px;
+			margin-top: 0;
+		}
+	}
+
+	&__pic {
+		display: block;
+		height: 0;
+		width: 0;
+	}
+
+	&__image {
+		display: block;
+		position: absolute;
+		height: 315px;
+		width: 412px;
+		border-radius: 20px;
+		object-fit: cover;
+		overflow: hidden;
+		z-index: 1;
+		top: 0;
+		position: relative;
+		background-color: $main;
+
+		&::before {
+			content: '';
+			position: absolute;
+			height: 100%;
+			width: 100%;
+			top: 0;
+			left: 0;
+			background-color: $main;
+			z-index: 2;
+		}
+	}
+
+	&__descr {
+		font-style: italic;
+		font-weight: 600;
+		font-size: 16px;
+		line-height: 27px;
+		text-decoration-line: underline;
+		text-transform: uppercase;
+		color: $text;
+		margin-top: 13px;
+		display: inline-block;
+	}
+
+	&__content {
+		width: 100%;
+		min-height: 808px;
+		resize: vertical;
+		transition: all 0.26s;
+	}
+
+	&__btn {
+		margin-top: 77px;
+	}
+
+	&__divider::after {
+		top: auto;
+		bottom: -100px;
+	}
+}

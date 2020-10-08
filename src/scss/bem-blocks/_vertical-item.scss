@@ -1,0 +1,62 @@
+.vertical-item {
+	flex: 0 0 330px;
+	background-color: #dcdde1;
+	border-radius: 60px;
+	padding: 45px 28px 60px;
+	line-height: 1.75;
+	transition: all 0.26s;
+
+	&:hover {
+		transform: translateY(-1%) scale(1.025);
+	}
+
+	&__date {
+		font-weight: 700;
+		font-size: 40px;
+		line-height: 49px;
+		text-transform: uppercase;
+		color: $main;
+	}
+
+	&__name {
+		font-weight: 700;
+		font-size: 30px;
+		line-height: 37px;
+		text-align: center;
+		text-transform: uppercase;
+	}
+
+	&__picture {
+		margin-top: 52px;
+		width: 100%;
+		object-fit: cover;
+		background: #C4C4C4;
+		border-radius: 25px;
+	}
+
+	&__title,
+	&__subtitle {
+		margin-top: 38px;
+		font-size: 18px;
+		line-height: 22px;
+		text-transform: uppercase;
+	}
+
+	&__subtitle {
+		font-weight: 600;
+		text-align: center;
+	}
+
+	&__text {
+		margin-top: 28px;
+		font-weight: 300;
+		font-size: 16px;
+		line-height: 1.75;
+	}
+
+	&__link {
+		margin-top: 37px;
+		line-height: 1.7;
+		letter-spacing: -0.01em;
+	}
+}

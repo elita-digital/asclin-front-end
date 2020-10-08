@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="ru">
+@@include('components/_head.html')
+
+<body>
+  @@include('components/_header.html')
+  <main class="page-content forum page-content--bg">
+    <div class="container">
+      <h2 class="forum__title section-title">
+        Форум
+        <span class="section-title__shadow">
+          Форум
+        </span>
+      </h2>
+      <section class="forum__inner section--bg">
+        <a href="forum-new.html"
+          class="forum__add">
+          добавить статью
+        </a>
+
+        <article class="forum__item horizontal-item flex">
+          <img src="images/profile-image.jpg"
+            alt="Иллюстрация к статье"
+            class="horizontal-item__pic">
+          <div class="horizontal-item__box">
+            <h3 class="horizontal-item__title">АРХИВ КОНФЕРЕНЦИИ ТРАНСЛЯЦИИ «АСКЛИН»</h3>
+            <p class="horizontal-item__author">Михаил Синкин</p>
+            <div class="horizontal-item__icons">
+              <span class="horizontal-item__like">0</span>
+              <span class="horizontal-item__comment">0</span>
+            </div>
+            <time class="horizontal-item__date"
+              datetime="2020-06-12">12.06.2020</time>
+          </div>
+          <a href="#"
+            class="horizontal-item__link"
+            title="Перейти к статье">Перейти к статье</a>
+        </article>
+
+        <article class="forum__item horizontal-item flex">
+          <img src="images/img-5.jpg"
+            alt="Иллюстрация к статье"
+            class="horizontal-item__pic">
+          <div class="horizontal-item__box">
+            <h3 class="horizontal-item__title">Литература по ЭНМГ</h3>
+            <p class="horizontal-item__author">Александр Куницкий</p>
+            <div class="horizontal-item__icons">
+              <span class="horizontal-item__like">0</span>
+              <span class="horizontal-item__comment">0</span>
+            </div>
+            <time class="horizontal-item__date"
+              datetime="2020-06-12">12.06.2020</time>
+          </div>
+          <a href="#"
+            class="horizontal-item__link"
+            title="Перейти к статье">Перейти к статье</a>
+        </article>
+
+        <article class="forum__item horizontal-item flex">
+          <img src="images/profile-image.jpg"
+            alt="Иллюстрация к статье"
+            class="horizontal-item__pic">
+          <div class="horizontal-item__box">
+            <h3 class="horizontal-item__title">Межгалактический конгресс 2020</h3>
+            <p class="horizontal-item__author">Михаил Синкин</p>
+            <div class="horizontal-item__icons">
+              <span class="horizontal-item__like">0</span>
+              <span class="horizontal-item__comment">0</span>
+            </div>
+            <time class="horizontal-item__date"
+              datetime="2020-06-12">12.06.2020</time>
+          </div>
+          <a href="#"
+            class="horizontal-item__link"
+            title="Перейти к статье">Перейти к статье</a>
+        </article>
+      </section>
+    </div>
+    <div class="forum__divider forum__divider--divider-left"></div>
+  </main>
+  @@include('components/_contact-form.html')
+  <div class="modal">
+    <button class="modal__close">
+      Закрыть окно
+    </button>
+    <div class="modal__overlay"></div>
+    <div class="modal__box">
+      @@include('components/_modal-account.html')
+      @@include('components/_modal-reg.html')
+      @@include('components/_modal-settings.html')
+      @@include('components/_modal-error.html')
+    </div>
+  </div>
+  @@include('components/_footer.html')
+  @@include('components/_scripts.html')
+</body>
+
+</html>

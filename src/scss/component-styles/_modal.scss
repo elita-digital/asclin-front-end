@@ -1,0 +1,156 @@
+.modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  min-height: 100vh;
+  z-index: 10;
+  overflow-y: auto;
+  padding: 10vh 0;
+  display: none;
+  max-width: 100vw;
+  overflow-x: hidden;
+
+  &__close {
+    font-size: 0;
+    border: none;
+    background-color: transparent;
+    height: 44px;
+    width: 44px;
+    position: absolute;
+    top: 5%;
+    right: 5%;
+    z-index: 14;
+
+    &::before,
+    &::after {
+      content: '';
+      position: absolute;
+      height: 100%;
+      width: 5px;
+      top: 50%;
+      left: 50%;
+      border-radius: 3px;
+      background-color: #ffffff;
+      box-shadow: 1px 1px 5px $main;
+      transition: all 0.26s;
+    }
+
+    &::before {
+      transform: translate(-50%, -50%) rotate(45deg);
+    }
+
+    &::after {
+      transform: translate(-50%, -50%) rotate(-45deg);
+    }
+
+    &:hover {
+      &::before {
+        transform: translate(-50%, -50%) rotate(-45deg);
+      }
+
+      &::after {
+        transform: translate(-50%, -50%) rotate(45deg);
+      }
+    }
+
+    &:focus {
+      &::before {
+        transform: translate(-50%, -50%) rotate(-60deg);
+      }
+
+      &::after {
+        transform: translate(-50%, -50%) rotate(60deg);
+      }
+    }
+  }
+
+  &__overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: rgba(16, 24, 45, 0.5);
+    height: 100%;
+    width: 100%;
+  }
+
+  &__box {
+    position: absolute;
+    max-width: 1150px;
+    width: 100%;
+    top: 0;
+    margin: 5% auto;
+    left: 0;
+    right: 0;
+    background-color: #ffffff;
+    border-radius: 70px;
+    padding: 180px 55px 60px 55px;
+    z-index: 13;
+    overflow-y: auto;
+  }
+
+  &__content-wrapper {
+    background-color: #ecedef;
+    border-radius: 70px;
+    padding: 0 28px 55px;
+    display: none;
+    z-index: 1;
+
+    &::before {
+      @include fake-bg;
+      position: absolute;
+      height: auto;
+      width: auto;
+      top: 95px;
+      right: 17px;
+      width: 50%;
+      max-width: 470px;
+      height: 50%;
+      max-height: 550px;
+      z-index: 0;
+      overflow: hidden;
+    }
+
+    &--error {
+      display: block;
+    }
+
+    &>* {
+      position: relative;
+      z-index: 1;
+    }
+  }
+
+  &__title {
+    text-align: center;
+    font-weight: 700;
+    font-size: 30px;
+    line-height: 37px;
+    text-transform: uppercase;
+    margin: 0 auto;
+    position: relative;
+    top: -120px;
+    max-width: 280px;
+  }
+
+  &__text {
+    margin-top: -42px;
+  }
+
+  &__text-item {
+    margin: 0;
+
+    &+& {
+      margin-top: 38px;
+      font-weight: 300;
+      font-size: 16px;
+      line-height: 1.62;
+    }
+  }
+
+  &__registration,
+  &__settings {
+    margin-top: 38px;
+  }
+}

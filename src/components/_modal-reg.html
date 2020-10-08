@@ -1,0 +1,178 @@
+<div class="modal__content-wrapper modal__content-wrapper--reg" id="modal-reg">
+  <p class="modal__title">вступить в ассоциацию</p>
+  <div class="modal__text">
+    <p class="modal__text-item">
+      Членом АСКЛИН может стать врач, биолог или медицинская сестра (техник),
+      профессиональный интерес которых лежит в области клинической
+      нейрофизиологии.
+    </p>
+    <p class="modal__text-item">
+      На основании Устава деятельности нашей организации членство в Ассоциации
+      является платным. Собранные взносы в 2020 году планируется потратить на
+      обновление дизайна сайта и значительное расширение его функционала. В
+      конце года для действительных членов общества будет опубликован подробный
+      отчет о структуре сбора средств и проведенных тратах.
+    </p>
+    <p class="modal__text-item">
+      В 2020 году размер ежегодной оплаты составит 500 (пятьсот) рублей.
+      Вступительный взнос, уплачиваемый при первоначальном вступлении в
+      Ассоциацию, так же составит 500 рублей, однако вступившие до 1 марта 2020
+      года будут освобождены от его уплаты.
+    </p>
+    <p class="modal__text-item">
+      Бланки для оплаты можно скачать в разделе Учредительные документы.
+    </p>
+    <p class="modal__text-item">
+      Прошу включить меня в члены Ассоциации специалистов по клинической
+      нейрофизиологии.
+    </p>
+    <p class="modal__text-item">О себе сообщаю следующие сведения:</p>
+  </div>
+  <form class="modal__registration registration" action>
+    <div class="registration__input-row flex">
+      <label class="registration__input-wrapper" for="registration-username">
+        <input
+          class="registration__input-text"
+          id="registration-username"
+          name="User Name"
+          type="text"
+          placeholder="Фамилия, Имя, Отчество"
+          required
+        />
+      </label>
+    </div>
+
+    <div class="registration__input-row flex">
+      <label
+        class="registration__input-wrapper registration__input-wrapper--3 registration__input-wrapper--fake-ph"
+        for="registration-borth-date"
+      >
+        <input
+          class="registration__input-text"
+          id="registration-borth-date"
+          name="Borth date"
+          type="date"
+          inputmode="numeric"
+          required
+        />
+        <span class="registration__fake-ph">Дата рождения</span>
+      </label>
+      <label
+        class="registration__input-wrapper registration__input-wrapper--3"
+        for="registration-city"
+      >
+        <input
+          class="registration__input-text"
+          id="registration-city"
+          name="City"
+          type="text"
+          placeholder="Город"
+          required
+        />
+      </label>
+      <label
+        class="registration__input-wrapper registration__input-wrapper--3"
+        for="registration-email"
+      >
+        <input
+          class="registration__input-text"
+          id="registration-email"
+          name="Email"
+          type="email"
+          placeholder="e-mail"
+          inputmode="email"
+          required
+        />
+      </label>
+    </div>
+
+    <div class="registration__input-row flex">
+      <label
+        class="registration__input-wrapper registration__input-wrapper--2"
+        for="registration-main-spec"
+      >
+        <input
+          class="registration__input-text"
+          id="registration-main-spec"
+          name="Main specialization"
+          type="text"
+          placeholder="Основная специальность"
+          required
+        />
+      </label>
+      <label
+        class="registration__input-wrapper registration__input-wrapper--2 registration__input-wrapper--sub-ph"
+        for="registration-add-spec"
+      >
+        <input
+          class="registration__input-text"
+          id="registration-add-spec"
+          name="Additional specialization"
+          type="text"
+          placeholder="Дополнительная специальность"
+        />
+        <span class="registration__sub-ph">*при наличии</span>
+      </label>
+    </div>
+
+    <div class="registration__input-row flex">
+      <label
+        class="registration__input-wrapper registration__input-wrapper--2"
+        for="registration-workplace"
+      >
+        <input
+          class="registration__input-text"
+          id="registration-workplace"
+          name="Work place"
+          type="text"
+          placeholder="Место работы"
+          required
+        />
+      </label>
+      <label
+        class="registration__input-wrapper registration__input-wrapper--2"
+        for="registration-work-pos"
+      >
+        <input
+          class="registration__input-text"
+          id="registration-work-pos"
+          name="Work position"
+          type="text"
+          placeholder="Должность"
+          required
+        />
+      </label>
+    </div>
+
+    <div class="registration__input-row flex">
+      <label class="registration__input-wrapper" for="registration-comment">
+        <textarea
+          class="registration__comment-field registration__input-text"
+          id="registration-comment"
+          name="Registration comment"
+          placeholder="Комментарии"
+        ></textarea>
+      </label>
+    </div>
+
+    <div class="registration__input-row flex">
+      <label class="registration__checkbox" for="registration-checkbox">
+        <input
+          class="registration__checkbox-input"
+          id="registration-checkbox"
+          name="Registration checkbox"
+          type="checkbox"
+          required
+        />
+        <span class="registration__checkbox-descr">
+          я согласен на отправку персональных данных и принимаю
+          <a class="registration__checkbox-link" href="#"
+            >условия обработки и хранения информации</a
+          >
+        </span>
+      </label>
+    </div>
+
+    <button class="registration__btn blue-btn" type="submit">отправить</button>
+  </form>
+</div>

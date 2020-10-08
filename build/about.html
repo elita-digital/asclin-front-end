@@ -1,0 +1,1056 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="shortcut icon" href="images/favicon.svg" type="image/x-icon">
+  <link rel="shortcut icon" href="images/favicon.png" type="image/x-icon">
+  <link rel="stylesheet" href="css/libs.min.css"/>
+  <link rel="stylesheet" href="css/style.min.css"/>
+  <title>АСКЛИН - ассоциация специалистов по клинической нейрофизиологии</title>
+</head>
+
+  <body>
+    <!-- SECTION - header -->
+<header class="header">
+  <div class="container">
+
+    <!-- SECTION - header-top -->
+    <div class="header__top flex">
+      <a class="header__logo logo"
+        href="index.html">
+        <img class="logo__picture"
+          src="images/logo.png"
+          alt="ASCLIN логотип">
+      </a>
+      <div class="header__icons">
+        <ul class="header__icon-list icon-list flex">
+          <li class="icon-list__item">
+            <a class="icon-list__link"
+              href="https://facebook.com">
+              ASCLIN Facebook
+              <svg class="icon-list__img"
+                viewBox="0 0 26 26"
+                xmlns="http://www.w3.org/2000/svg">
+                <path
+                  d="M23.4053 0H2.66121C1.95541 0 1.27852 0.280376 0.77945 0.77945C0.280376 1.27852 0 1.95541 0 2.66121L0 23.4053C0.0173604 24.0995 0.305382 24.7594 0.802586 25.2442C1.29979 25.729 1.96679 26.0002 2.66121 26H23.4053C24.0882 25.9831 24.7384 25.7043 25.2214 25.2214C25.7043 24.7384 25.9831 24.0882 26 23.4053V2.66121C26.0002 1.96679 25.729 1.29979 25.2442 0.802586C24.7594 0.305382 24.0995 0.0173604 23.4053 0V0ZM22.0747 2.66121V6.49335H19.4135C19.2352 6.47934 19.056 6.50414 18.8882 6.56605C18.7204 6.62797 18.568 6.72552 18.4415 6.85199C18.3151 6.97846 18.2175 7.13084 18.1556 7.29863C18.0937 7.46643 18.0689 7.64565 18.0829 7.82395V10.4852H21.9816V14.3838H18.2027V23.4852H14.304V14.304H11.6428V10.4053H14.304V7.14534C14.3349 5.95434 14.8263 4.8217 15.6749 3.98548C16.5236 3.14926 17.6633 2.67458 18.8547 2.66121H22.0747Z"></path>
+              </svg>
+            </a>
+          </li>
+          <li class="icon-list__item">
+            <a class="icon-list__link"
+              href="https://instagram.com">
+              ASCLIN Instagram
+              <svg class="icon-list__img"
+                viewBox="0 0 26 27"
+                xmlns="http://www.w3.org/2000/svg">
+                <path
+                  d="M3.34662 0.00100388H22.6534C23.0956 -0.00996443 23.5354 0.0690437 23.9461 0.233232C24.3568 0.39742 24.7299 0.643363 25.0426 0.956129C25.3554 1.2689 25.6013 1.64196 25.7655 2.05268C25.9297 2.4634 26.0087 2.9032 25.9978 3.34538V22.6521C26.0143 23.0976 25.9394 23.5418 25.7777 23.9572C25.616 24.3726 25.3709 24.7506 25.0575 25.0676C24.7442 25.3847 24.3692 25.6343 23.9557 25.8009C23.5423 25.9675 23.099 26.0477 22.6534 26.0365H3.34662C2.90096 26.0477 2.45774 25.9675 2.04426 25.8009C1.63077 25.6343 1.2558 25.3847 0.942458 25.0676C0.629112 24.7506 0.384034 24.3726 0.22233 23.9572C0.0606262 23.5418 -0.0142757 23.0976 0.00224165 22.6521V3.34538C-0.00872666 2.9032 0.0702814 2.4634 0.234469 2.05268C0.398658 1.64196 0.6446 1.2689 0.957367 0.956129C1.27013 0.643363 1.6432 0.39742 2.05392 0.233232C2.46463 0.0690437 2.90443 -0.00996443 3.34662 0.00100388ZM18.9626 2.89236C18.6527 2.89582 18.3565 3.02046 18.1373 3.23961C17.9182 3.45876 17.7935 3.75499 17.7901 4.06489V6.87629C17.7935 7.18619 17.9182 7.48242 18.1373 7.70157C18.3565 7.92071 18.6527 8.04536 18.9626 8.04882H21.9072C22.2182 8.04882 22.5164 7.92529 22.7363 7.7054C22.9562 7.4855 23.0798 7.18727 23.0798 6.87629V4.06489C23.0798 3.75391 22.9562 3.45567 22.7363 3.23578C22.5164 3.01589 22.2182 2.89236 21.9072 2.89236H18.9626ZM23.0931 11.0068H20.8013C21.0208 11.7327 21.1331 12.4869 21.1344 13.2453C21.0924 15.3539 20.2188 17.3606 18.7039 18.8281C17.189 20.2955 15.1556 21.1049 13.0466 21.0799C10.9354 21.1085 8.89856 20.3007 7.38078 18.8328C5.86301 17.365 4.98756 15.3563 4.94552 13.2453C4.95762 12.4836 5.08798 11.7284 5.33192 11.0068H2.89359V22.0126C2.8971 22.2859 3.00814 22.5468 3.20266 22.7389C3.39719 22.9309 3.65954 23.0386 3.93288 23.0385H22.0538C22.3271 23.0386 22.5895 22.9309 22.784 22.7389C22.9785 22.5468 23.0896 22.2859 23.0931 22.0126V11.0068ZM13.0466 7.88893C12.3695 7.87835 11.6968 8.00128 11.0672 8.25068C10.4375 8.50009 9.86313 8.8711 9.37687 9.34251C8.89061 9.81392 8.50197 10.3765 8.23317 10.9981C7.96436 11.6198 7.82064 12.2883 7.81022 12.9655C7.83476 14.3308 8.39984 15.6306 9.38151 16.5798C10.3632 17.529 11.6813 18.05 13.0466 18.0286C13.7221 18.0392 14.393 17.9166 15.021 17.6679C15.6491 17.4192 16.222 17.0491 16.707 16.579C17.192 16.1088 17.5797 15.5477 17.8478 14.9277C18.1159 14.3076 18.2593 13.6409 18.2697 12.9655C18.2487 11.6002 17.687 10.299 16.7078 9.34727C15.7286 8.39559 14.412 7.87113 13.0466 7.88893Z"></path>
+              </svg>
+            </a>
+          </li>
+          <li class="icon-list__item">
+            <a class="icon-list__link"
+              href="https://youtube.com">
+              <svg class="icon-list__img"
+              height="26px"
+              width="35px"
+              viewBox="0 0 53 38"
+              xmlns="http://www.w3.org/2000/svg">
+                <path
+                d="M51.8591 5.79525C51.5546 4.67838 50.9639 3.66032 50.1453 2.84175C49.3267 2.02317 48.3087 1.43243 47.1918 1.12794C43.056 0 26.4741 0 26.4741 0C26.4741 0 9.90509 0 5.75636 1.08904C4.6401 1.40738 3.62449 2.00747 2.80712 2.83165C1.98975 3.65583 1.3981 4.67639 1.08904 5.79525C0 9.94398 0 18.5396 0 18.5396C0 18.5396 0 27.226 1.08904 31.271C1.39117 32.3891 1.98112 33.4084 2.80006 34.2273C3.61899 35.0463 4.63831 35.6362 5.75636 35.9384C9.94398 37.0793 26.5 37.0793 26.5 37.0793C26.5 37.0793 43.0819 37.0793 47.2436 35.9902C48.3605 35.6857 49.3786 35.095 50.1971 34.2764C51.0157 33.4578 51.6065 32.4398 51.911 31.3229C53 27.1742 53 18.5785 53 18.5785C53 18.5785 53 9.94398 51.8591 5.79525ZM21.1974 26.5389V10.6052L35.0049 18.5396L21.1974 26.5389Z"/>
+              </svg>
+            </a>
+          </li>
+          <li class="icon-list__item icon-list__item--lk">
+            <a class="icon-list__link"
+              href="cabinet.html">
+              Личный кабинет
+              <svg class="icon-list__img"
+                viewBox="0 0 99 36"
+                xmlns="http://www.w3.org/2000/svg">
+                <path
+                  d="M46.658 8.825v7.739h-.554V9.34h-4.011l-.104 2.838a14.908 14.908 0 01-.27 2.58 3.082 3.082 0 01-.607 1.43 1.29 1.29 0 01-1.045.465 2.41 2.41 0 01-.554-.064l.064-.53c.124.019.25.019.374 0a.967.967 0 00.813-.399c.268-.382.437-.826.49-1.29.124-.75.197-1.51.22-2.27l.103-3.366 5.081.09zm3.496 0h.554v6.797l5.289-6.797h.49v7.739h-.568V9.792l-5.275 6.785h-.49V8.825zm14.846 0v7.739h-.568v-3.315a6.282 6.282 0 01-2.58.593 3.031 3.031 0 01-2.05-.645 2.219 2.219 0 01-.736-1.78v-2.58h.568v2.58a1.806 1.806 0 00.593 1.445 2.464 2.464 0 001.677.516 6.242 6.242 0 002.58-.593v-3.87l.516-.09zm9.84 0v7.739h-.554V12.9h-5.159v3.689h-.568V8.85h.568v3.535h5.16v-3.56h.554zm8.63 3.444a2.233 2.233 0 01.722 1.806 2.284 2.284 0 01-.76 1.857c-.628.466-1.4.695-2.18.645h-2.967v-7.74h.554v2.774h2.58a3.122 3.122 0 012.05.658zm-.452 3.315a1.844 1.844 0 00.594-1.497c0-1.29-.787-1.947-2.36-1.947h-2.413v3.96h2.451a2.58 2.58 0 001.728-.516zm2.58-6.759h.568v7.739h-.568V8.825zm4.063 0h.568v6.797l5.25-6.797h.49v7.739h-.49V9.792l-5.276 6.785H89.7l-.039-7.752zm1.948-.942a1.212 1.212 0 01-.49-.993h.49a.876.876 0 00.348.735c.27.181.59.272.916.258.32.014.637-.077.903-.258a.929.929 0 00.36-.735h.452a1.2 1.2 0 01-.477.993 2.308 2.308 0 01-2.476 0h-.026zm-48.382 18.29H41.37v3.676h-.567V22.11h.567v3.56h1.87l2.786-3.56h.62l-2.967 3.766 3.173 3.973h-.67l-2.955-3.676zm10.525 1.497h-4.488l-.98 2.179h-.62l3.573-7.739h.555l3.573 7.739h-.606l-1.007-2.18zm-.206-.478l-2.038-4.463-2.025 4.463h4.063zm4.114-5.082h5.573v.49h-5.005v2.8h2.58a3.38 3.38 0 012.076.54 1.986 1.986 0 01.71 1.639 2.012 2.012 0 01-.761 1.69 3.508 3.508 0 01-2.18.58h-2.992V22.11zm2.993 7.262c.62.043 1.239-.11 1.767-.439a1.6 1.6 0 00.593-1.29c0-1.148-.786-1.728-2.36-1.728h-2.425v3.508l2.425-.051zm5.714-7.262h.554v6.797l5.34-6.797h.49v7.739h-.619v-6.784l-5.275 6.784h-.49V22.11zm16.123 0v7.739h-.555v-3.676h-5.16v3.676h-.644V22.11h.567v3.56h5.16v-3.56h.632zm8.835 7.236v.503h-5.34V22.11h5.16v.503h-4.593v3.057h4.128v.503h-4.128v3.173h4.773zm7.442-6.733h-2.799v7.236h-.49v-7.236h-2.863v-.503h6.152v.503zM.032 27.373c.116-.078.206-.155.322-.22.361-.206.735-.412 1.11-.593l2.244-1.096 1.599-.748 1.6-.736 1.56-.683.67-.284a1.29 1.29 0 011.69.67c.258.594.503 1.187.748 1.78l.555 1.29c.18.4.348.8.529 1.187l.658 1.419c.232.49.477.967.71 1.444.018.049.04.096.064.142v.065a.142.142 0 00.129-.052.218.218 0 000-.09c0-.696.064-1.393.09-2.09.026-.696 0-1.109.09-1.676v-.671a.386.386 0 000-.245l-.464-1.006-.658-1.367c-.142-.31-.31-.62-.452-.929a2.058 2.058 0 01-.128-.4.657.657 0 01.58-.722h4.411a1.02 1.02 0 01.516.09.646.646 0 01.335.748 1.844 1.844 0 01-.103.284l-.967 2-.58 1.289a.864.864 0 00-.09.4c0 .593.064 1.186.09 1.78 0 .864.09 1.728.128 2.58a.464.464 0 000 .128c.006.011.014.02.024.027a.065.065 0 00.069 0 .065.065 0 00.023-.027c.271-.58.555-1.148.826-1.728.27-.58.62-1.29.916-2.012l.967-2.219c.18-.412.348-.838.529-1.29a1.29 1.29 0 01.645-.696 1.16 1.16 0 01.993 0c.555.22 1.096.465 1.638.71l1.225.541 1.613.748 1.638.761 1.715.852c.4.19.789.405 1.161.645l.18.128c0 .065 0 .13-.09.181l-.4.542a18.698 18.698 0 01-2.476 2.67c-.409.373-.84.722-1.29 1.045l-.941.67-.684.426c-.27.155-.542.322-.825.464l-.903.439-.323.167-.49.207-.774.296-.593.207c-.22.064-.439.142-.67.193l-.53.13h-.206l-.684.128-.89.168h-.129l-.554.077h-.58a3.119 3.119 0 00-.607.078c-.21.02-.422.02-.632 0h-.4c-.35.01-.699-.011-1.044-.065a7.243 7.243 0 00-.761-.077 3.16 3.16 0 01-.349 0h-.322l-.439-.065h-.051c-.297 0-.593-.09-.89-.154a5.851 5.851 0 01-.606-.142 3.04 3.04 0 00-.49-.13l-.336-.128-.529-.155-.451-.142-.271-.116c-.27-.103-.542-.194-.8-.31a20.58 20.58 0 01-.954-.464 8.887 8.887 0 01-.851-.438 14.303 14.303 0 01-.749-.452l-.632-.413-.786-.554c-.4-.31-.787-.62-1.161-.955a20.225 20.225 0 01-1.29-1.29 15.654 15.654 0 01-1.651-2.012c-.168-.245-.064-.09-.064-.154zM15.729.003a9.66 9.66 0 011.534.103c.473.053.94.152 1.393.296.336.117.671.22.98.362a6.1 6.1 0 011.845 1.29 5.997 5.997 0 011.51 2.58c.178.588.24 1.206.18 1.818-.065.529-.142 1.044-.22 1.573-.077.53-.116.8-.18 1.187.007.086.007.172 0 .258a.193.193 0 00.064.232 1.586 1.586 0 01.568 1.096c.052.295.052.596 0 .89a4.85 4.85 0 01-.206.955 1.432 1.432 0 01-.774.89 2.67 2.67 0 00-.413.245c-.19.179-.305.423-.323.683-.085.386-.21.762-.373 1.123a6.72 6.72 0 01-1.755 2.27 6.63 6.63 0 01-1.56 1.044 5.626 5.626 0 01-1.587.465 4.699 4.699 0 01-.954 0 5.828 5.828 0 01-1.755-.361 7.107 7.107 0 01-2.85-2.154 6.052 6.052 0 01-.954-1.625 4.528 4.528 0 01-.245-.813 1.506 1.506 0 00-.168-.22.774.774 0 00-.426-.49l-.206-.116a1.29 1.29 0 01-.748-.8 4.372 4.372 0 01-.336-1.818c.01-.36.131-.707.349-.993.066-.075.14-.144.219-.206a.206.206 0 00.077-.22c0-.451-.142-.89-.219-1.29-.077-.4-.116-1.212-.18-1.805a4.553 4.553 0 010-1.11c.07-.44.182-.871.335-1.29a5.946 5.946 0 011.29-2.05A6.179 6.179 0 0111.408.828a8.124 8.124 0 011.74-.58 11.158 11.158 0 012.58-.245z"></path>
+              </svg>
+            </a>
+          </li>
+        </ul>
+        <button class="header__burger flex"
+          type="button">
+          <span class="header__burger-row"></span>
+        </button>
+      </div>
+    </div>
+    <!-- !SECTION - header-top -->
+
+    <!-- SECTION - header-bottom -->
+    <div class="header__bottom flex">
+      <div class="header__box flex">
+
+        <div class="header__title">
+          <h1 class="header__title-sup">
+            АСКЛИН
+          </h1>
+          <span class="header__title-sub">
+            ассоциация специалистов по клинической нейрофизиологии
+          </span>
+        </div>
+
+        <nav class="header__menu menu menu--col">
+          <ul class="menu__list flex">
+            <li class="menu__item">
+              <a class="menu__link"
+                href="about.html">
+                об ассоциации
+              </a>
+            </li>
+            <li class="menu__item">
+              <a class="menu__link"
+                href="events.html">
+                Мероприятия
+              </a>
+            </li>
+            <li class="menu__item">
+              <a class="menu__link"
+                href="recomendations.html">
+                Рекомендации
+              </a>
+            </li>
+            <li class="menu__item">
+              <a class="menu__link"
+                href="specialists.html">
+                Специалисты
+              </a>
+            </li>
+            <li class="menu__item">
+              <a class="menu__link"
+                href="education.html">
+                образование
+              </a>
+            </li>
+            <li class="menu__item">
+              <a class="menu__link"
+                href="forum.html">
+                форум
+              </a>
+            </li>
+          </ul>
+        </nav>
+      </div>
+      <button class="header__btn white-btn js-modal-call"
+        data-modal="#modal-reg"
+        type="button">
+        Вступить в ассоциацию
+      </button>
+    </div>
+    <!-- !SECTION - header-bottom -->
+
+  </div>
+</header>
+<!-- !SECTION - header -->
+    <main class="page-content about">
+      <div class="container">
+        <h2 class="about__main-title section-title">
+          об ассоциации<span class="section-title__shadow">об ассоциации</span>
+        </h2>
+
+        <div class="about__counter flex">
+          <span class="about__counter-item counter-item">
+            <img
+              src="images/icons/people-group.svg"
+              alt=""
+              class="counter-item__icon"
+            />
+            <span>3</span>
+            <span class="counter-item__descr">конференции</span>
+          </span>
+          <span class="about__counter-item counter-item">
+            <img
+              src="images/icons/people.svg"
+              alt=""
+              class="counter-item__icon"
+            />
+            <span>300+</span>
+            <span class="counter-item__descr">врачей</span>
+          </span>
+          <span class="about__counter-item counter-item">
+            <img
+              src="images/icons/footer-pointer.svg"
+              alt=""
+              class="counter-item__icon"
+            />
+            <span>48</span>
+            <span class="counter-item__descr">регеонов РФ</span>
+          </span>
+          <span class="about__counter-item counter-item">
+            <img
+              src="images/icons/partners.svg"
+              alt=""
+              class="counter-item__icon"
+            />
+            <span>6</span>
+            <span class="counter-item__descr">стран</span>
+          </span>
+        </div>
+
+        <article class="about__item content-item content-item--bg-right flex">
+          <img
+            class="content-item__picture"
+            src="images/profile-image.jpg"
+            alt="Фото конференции"
+          />
+          <div class="content-item__content">
+            <h3 class="content-item__title">Кто мы</h3>
+            <p class="content-item__text">
+              Ассоциация специалистов по клинической нейрофизиологии (АСКЛИН) –
+              это некоммерческая, независимая общественная организация, которая
+              объединяет более 300 врачей-нейрофизиологов из 6 стран.
+            </p>
+            <p class="content-item__text">
+              Мы – врачи с опытом работы в области прикладной клинической
+              нейрофизиологии. Эта область диагностических исследований
+              находится на стыке нескольких специальностей, таких как
+              функциональная диагностика, неврология, нейрохирургия,
+              реабилитация, анестезиология и др., и поэтому требует активного
+              сотрудничества врачей этих направлений.
+            </p>
+          </div>
+        </article>
+
+        <article
+          class="about__item content-item content-item--divider-left content-item--left item--bg-left flex"
+        >
+          <img
+            class="content-item__picture"
+            src="images/img-3.jpg"
+            alt="Фото конференции"
+          />
+          <div class="content-item__content">
+            <h3 class="content-item__title">Что мы делаем</h3>
+
+            <p class="content-item__text">
+              Наша цель заключается в том, чтобы способствовать объединению
+              врачей - специалистов в области клинической нейрофизиологии,
+              поддерживать развитие нашей специальности, что приведет к
+              повышению качества проведения и интерпретации нейрофизиологических
+              исследований, улучшению диагностики и достижению лучших
+              результатов лечения наших пациентов.
+            </p>
+            <p class="content-item__text">
+              Обеспечение высокого уровня диагностических исследований требует
+              постоянного обучения. Мы предоставляем практические и научные
+              ресурсы для всех членов АСКЛИН, которые помогут совершенствовать
+              свои навыки и знания.
+            </p>
+            <p class="content-item__text">
+              Мы организуем конференции для повышения квалификации
+              врачей-нейрофизиологов и улучшения качества информированности
+              специалистов о современных проблемах и трендах этой специальности.
+            </p>
+            <p class="content-item__text">
+              Проводим Мастер-классы по методам клинической нейрофизиологии в
+              разных регионах Российской Федерации. Организуем образовательные
+              ресурсы для освоения современных комплексов аппаратуры для
+              проведения различных нейрофизиологических исследований.
+            </p>
+            <p class="content-item__text">
+              Составляем обзоры и публикации по современным аспектам и проблемам
+              клинической нейрофизиологии в российской и зарубежной литературе.
+            </p>
+            <p class="content-item__text">
+              Также мы стремимся повысить информированность врачей смежных
+              специальностей о специфике и практическом применении
+              нейрофизиологических исследований и стандартизировать показания
+              для направления на нейродиагностические исследования.
+            </p>
+            <p class="content-item__text">
+              Согласно нашей цели по продвижению передового опыта в области
+              клинической нейрофизиологии, мы стремимся постоянно
+              совершенствовать знания членов АСКЛИН и улучшать информационные
+              ресурсы для образования каждого из нас.
+            </p>
+          </div>
+        </article>
+
+        <article
+          class="about__item content-item content-item--divider-right content-item--bg-right flex"
+        >
+          <img
+            class="content-item__picture"
+            src="images/img-4.jpg"
+            alt="Фото конференции"
+          />
+          <div class="content-item__content">
+            <h3 class="content-item__title">Зачем мы это делаем</h3>
+            <p class="content-item__text">
+              Мы хотим стандартизировать алгоритмы и методические аспекты
+              проведения и интерпретации нейрофизиологических исследований,
+              участвовать в разработке стандартов качества оказания медицинской
+              помощи в рамках собственной и смежных специальностей, с
+              последующей регистрацией их в системе Министерства Здравоохранения
+              РФ.
+            </p>
+            <p class="content-item__text">
+              Планируем разработать современную концепцию сертификации
+              специалистов в области клинической нейрофизиологии с учетом
+              международных подходов и особенностей Российского законодательства
+              в области охраны здоровья, для улучшения качества
+              профессионального образования и повышения квалификации врачей.
+            </p>
+            <p class="content-item__text">
+              Члены АСКЛИН смогут принимать участие в обсуждении юридических
+              вопросов как в области образования по клинической нейрофизиологии,
+              так и в сфере ежедневной практической деятельности врачей нашей
+              специальности.
+            </p>
+            <p class="content-item__text">
+              Одной из задач ассоциации является выход на международный уровень
+              сертификации специалистов, создание пилотных мультицентровых и
+              международных научно-исследовательских проектов, экспериментальных
+              научных разработок в области прикладной нейрофизиологии.
+            </p>
+          </div>
+        </article>
+        <div class="about__bottom about__bottom--divider-left"></div>
+      </div>
+    </main>
+    <section class="contact-form">
+  <div class="container">
+    <form class="contact-form__inner">
+      <span class="contact-form__title"> Свяжитесь с нами </span>
+      <div class="contact-form__box">
+        <p class="contact-form__text">
+          Если у вас возникли любые вопросы по поводу участия в работе
+          Ассоциации, напишите нам
+          <a class="contact-form__link" href="mailto:info@asclin.ru"
+            >info@asclin.ru</a
+          >
+        </p>
+        <label class="contact-form__item" for="contact-form-name">
+          <input
+            class="contact-form__input"
+            id="contact-form-name"
+            name="Имя"
+            type="text"
+            placeholder="Имя"
+            required
+          />
+        </label>
+        <label class="contact-form__item" for="contact-form-surname">
+          <input
+            class="contact-form__input"
+            id="contact-form-surname"
+            name="Фамилия"
+            type="text"
+            placeholder="Фамилия"
+            required
+          />
+        </label>
+        <label class="contact-form__item" for="contact-form-email">
+          <input
+            class="contact-form__input"
+            id="contact-form-email"
+            name="E-mail"
+            type="text"
+            placeholder="E-mail"
+            inputmode="email"
+            required
+          />
+        </label>
+        <label class="contact-form__item" for="contact-form-phone">
+          <input
+            class="contact-form__input"
+            id="contact-form-phone"
+            name="Телефон"
+            type="tel"
+            placeholder="Телефон"
+            inputmode="tel"
+            required
+          />
+        </label>
+        <button type="submit" class="contact-form__btn white-btn">
+          Отправить
+        </button>
+        <p class="contact-form__text">
+          Официальная группа в
+          <a class="contact-form__link" href="https://facebook.com">Фейсбук</a>
+          для членов ассоциации.
+        </p>
+        <p class="contact-form__text">
+          Канал на
+          <a class="contact-form__link" href="https://youtube.com">Youtube</a>
+        </p>
+      </div>
+    </form>
+  </div>
+</section>
+
+    <div class="modal">
+      <button class="modal__close">Закрыть окно</button>
+      <div class="modal__overlay"></div>
+      <div class="modal__box">
+        <div class="modal__content-wrapper account"
+  id="modal-account">
+  <div class="account__content-top account__top flex">
+    <img class="account__content-img"
+      src="images/profile-image.jpg"
+      alt="Аватар профиля">
+    <div class="account__content-right">
+      <p class="account__user-surname">Фамилия</p>
+      <p class="account__user-name">
+        <span class="account__user-first-name">Имя</span>
+        <span class="account__user-second-name">Отчество</span>
+      </p>
+      <p class="account__user-special">Специализация</p>
+      <p class="account__user-exp">
+        <strong class="account__exp-title">стаж:</strong>
+        16 лет</p>
+      <p class="account__user-data">
+        <strong class="account__data-title">Место работы: </strong>
+        <span class="account__data-value">Название места работы</span>
+      </p>
+      <p class="account__user-data">
+        <strong class="account__data-title">Адрес работы: </strong>
+        <span class="account__data-value">индекс, город, улица, дом, квартира</span>
+      </p>
+      <p class="account__user-data">
+        <strong class="account__data-title">Телефон: </strong>
+        <a class="account__data-value"
+          href="+7900000000">+7(900) 000-00-00</a>
+      </p>
+      <p class="account__user-data">
+        <strong class="account__data-title">Почта: </strong>
+        <a class="account__data-value"
+          href="mailto:aaa@info.ru">aaa@info.ru</a>
+      </p>
+      <a class="account__user-forum"
+        href="my-articles.html">Статьи на форуме</a>
+    </div>
+  </div>
+  <div class="account__content-bottom">
+    <p class="account__user-descr">Далеко-далеко за словесными горами в стране гласных и согласных живут рыбные тексты.
+      Не
+      на берегу за своих курсивных страну даже гор,
+      страна он силуэт свое парадигматическая ipsum заманивший взгляд необходимыми напоивший? Назад точках эта lorem
+      реторический страна правилами он своих пустился инициал не. </p>
+
+    <!-- SECTION - раскрывающиеся инфо-блоки -->
+    <div class="account__info-box info-box">
+      <button class="info-box__title info-box__title--open js-info-open">Трудовая деятельность</button>
+      <div class="info-box__content">
+        <div class="info-box__row info-box__row--top flex">
+          <span class="info-box__col info-box__col--slim">Даты</span>
+          <span class="info-box__col">Место</span>
+          <span class="info-box__col  info-box__col--slim">Должность</span>
+        </div>
+        <div class="info-box__row flex">
+          <span class="info-box__col info-box__col--slim">2010-2020</span>
+          <span class="info-box__col">ККБ №1 г.Краснодар</span>
+          <span class="info-box__col  info-box__col--slim">Нейрофизиолог, Невролог, врач УЗИ</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="account__info-box info-box">
+      <button class="info-box__title js-info-open">Образование</button>
+      <div class="info-box__content">
+        <div class="info-box__row info-box__row--top flex">
+          <span class="info-box__col info-box__col--slim">Год окончания</span>
+          <span class="info-box__col">ВУЗ</span>
+          <span class="info-box__col  info-box__col--slim">Факультет</span>
+        </div>
+        <div class="info-box__row flex">
+          <span class="info-box__col info-box__col--slim">2003</span>
+          <span class="info-box__col">КубГМУ</span>
+          <span class="info-box__col  info-box__col--slim">Нейрофизиология</span>
+        </div>
+        <div class="info-box__row flex">
+          <span class="info-box__col info-box__col--slim">2003</span>
+          <span class="info-box__col">КубГМУ</span>
+          <span class="info-box__col  info-box__col--slim">Нейрофизиология</span>
+        </div>
+        <div class="info-box__row flex">
+          <span class="info-box__col info-box__col--slim">2003</span>
+          <span class="info-box__col">КубГМУ</span>
+          <span class="info-box__col  info-box__col--slim">Нейрофизиология</span>
+        </div>
+        <div class="info-box__row flex">
+          <span class="info-box__col info-box__col--slim">2003</span>
+          <span class="info-box__col">КубГМУ</span>
+          <span class="info-box__col  info-box__col--slim">Нейрофизиология</span>
+        </div>
+        <div class="info-box__row flex">
+          <span class="info-box__col info-box__col--slim">2003</span>
+          <span class="info-box__col">КубГМУ</span>
+          <span class="info-box__col  info-box__col--slim">Нейрофизиология</span>
+        </div>
+        <div class="info-box__row flex">
+          <span class="info-box__col info-box__col--slim">2003</span>
+          <span class="info-box__col">КубГМУ</span>
+          <span class="info-box__col  info-box__col--slim">Нейрофизиология</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="account__info-box info-box">
+      <button class="info-box__title js-info-open">Дополнительные сведения</button>
+      <div class="info-box__content">
+        <div class="info-box__row flex">
+          Далеко-далеко за словесными горами в стране гласных и согласных живут рыбные
+          тексты. Большого,
+          алфавит жизни семь оксмокс жаренные живет имеет решила возвращайся,
+          подпоясал над это. Снова,
+          мир. Текст города обеспечивает бросил путь языкового домах осталось сбить,
+          то она переписывается даль имени свой заголовок от всех. Путь необходимыми бросил семантика деревни страна
+          сбить,
+          над переписывается пунктуация наш выйти не,
+          вдали он все журчит вопрос ! Продолжил свою текста что на берегу которое,
+          коварный,
+          жаренные ipsum предупреждал правилами сих предупредила ! Сих жизни языком рыбными своего взобравшись мир
+          точках себя назад рекламных алфавит предупреждал она домах ipsum,
+          подзаголовок грамматики его ! Оксмокс своих всеми океана его путь меня подзаголовок?
+        </div>
+      </div>
+    </div>
+    <!-- !SECTION - расктывающиеся инфо-блоки -->
+
+    <ul class="account__icon-list icon-list flex">
+      <li class="icon-list__item">
+        <a class="icon-list__link"
+          href="https://facebook.com">
+          <svg class="icon-list__img"
+            height="38px"
+            width="38px"
+            viewBox="0 0 26 26"
+            xmlns="http://www.w3.org/2000/svg">
+            <path
+              d="M23.4053 0H2.66121C1.95541 0 1.27852 0.280376 0.77945 0.77945C0.280376 1.27852 0 1.95541 0 2.66121L0 23.4053C0.0173604 24.0995 0.305382 24.7594 0.802586 25.2442C1.29979 25.729 1.96679 26.0002 2.66121 26H23.4053C24.0882 25.9831 24.7384 25.7043 25.2214 25.2214C25.7043 24.7384 25.9831 24.0882 26 23.4053V2.66121C26.0002 1.96679 25.729 1.29979 25.2442 0.802586C24.7594 0.305382 24.0995 0.0173604 23.4053 0V0ZM22.0747 2.66121V6.49335H19.4135C19.2352 6.47934 19.056 6.50414 18.8882 6.56605C18.7204 6.62797 18.568 6.72552 18.4415 6.85199C18.3151 6.97846 18.2175 7.13084 18.1556 7.29863C18.0937 7.46643 18.0689 7.64565 18.0829 7.82395V10.4852H21.9816V14.3838H18.2027V23.4852H14.304V14.304H11.6428V10.4053H14.304V7.14534C14.3349 5.95434 14.8263 4.8217 15.6749 3.98548C16.5236 3.14926 17.6633 2.67458 18.8547 2.66121H22.0747Z">
+            </path>
+
+          </svg>
+        </a>
+      </li>
+      <li class="icon-list__item">
+        <a class="icon-list__link"
+          href="https://instagram.com">
+          <svg class="icon-list__img"
+            height="38px"
+            width="38px"
+            viewBox="0 0 26 27"
+            xmlns="http://www.w3.org/2000/svg">
+            <path
+              d="M3.34662 0.00100388H22.6534C23.0956 -0.00996443 23.5354 0.0690437 23.9461 0.233232C24.3568 0.39742 24.7299 0.643363 25.0426 0.956129C25.3554 1.2689 25.6013 1.64196 25.7655 2.05268C25.9297 2.4634 26.0087 2.9032 25.9978 3.34538V22.6521C26.0143 23.0976 25.9394 23.5418 25.7777 23.9572C25.616 24.3726 25.3709 24.7506 25.0575 25.0676C24.7442 25.3847 24.3692 25.6343 23.9557 25.8009C23.5423 25.9675 23.099 26.0477 22.6534 26.0365H3.34662C2.90096 26.0477 2.45774 25.9675 2.04426 25.8009C1.63077 25.6343 1.2558 25.3847 0.942458 25.0676C0.629112 24.7506 0.384034 24.3726 0.22233 23.9572C0.0606262 23.5418 -0.0142757 23.0976 0.00224165 22.6521V3.34538C-0.00872666 2.9032 0.0702814 2.4634 0.234469 2.05268C0.398658 1.64196 0.6446 1.2689 0.957367 0.956129C1.27013 0.643363 1.6432 0.39742 2.05392 0.233232C2.46463 0.0690437 2.90443 -0.00996443 3.34662 0.00100388ZM18.9626 2.89236C18.6527 2.89582 18.3565 3.02046 18.1373 3.23961C17.9182 3.45876 17.7935 3.75499 17.7901 4.06489V6.87629C17.7935 7.18619 17.9182 7.48242 18.1373 7.70157C18.3565 7.92071 18.6527 8.04536 18.9626 8.04882H21.9072C22.2182 8.04882 22.5164 7.92529 22.7363 7.7054C22.9562 7.4855 23.0798 7.18727 23.0798 6.87629V4.06489C23.0798 3.75391 22.9562 3.45567 22.7363 3.23578C22.5164 3.01589 22.2182 2.89236 21.9072 2.89236H18.9626ZM23.0931 11.0068H20.8013C21.0208 11.7327 21.1331 12.4869 21.1344 13.2453C21.0924 15.3539 20.2188 17.3606 18.7039 18.8281C17.189 20.2955 15.1556 21.1049 13.0466 21.0799C10.9354 21.1085 8.89856 20.3007 7.38078 18.8328C5.86301 17.365 4.98756 15.3563 4.94552 13.2453C4.95762 12.4836 5.08798 11.7284 5.33192 11.0068H2.89359V22.0126C2.8971 22.2859 3.00814 22.5468 3.20266 22.7389C3.39719 22.9309 3.65954 23.0386 3.93288 23.0385H22.0538C22.3271 23.0386 22.5895 22.9309 22.784 22.7389C22.9785 22.5468 23.0896 22.2859 23.0931 22.0126V11.0068ZM13.0466 7.88893C12.3695 7.87835 11.6968 8.00128 11.0672 8.25068C10.4375 8.50009 9.86313 8.8711 9.37687 9.34251C8.89061 9.81392 8.50197 10.3765 8.23317 10.9981C7.96436 11.6198 7.82064 12.2883 7.81022 12.9655C7.83476 14.3308 8.39984 15.6306 9.38151 16.5798C10.3632 17.529 11.6813 18.05 13.0466 18.0286C13.7221 18.0392 14.393 17.9166 15.021 17.6679C15.6491 17.4192 16.222 17.0491 16.707 16.579C17.192 16.1088 17.5797 15.5477 17.8478 14.9277C18.1159 14.3076 18.2593 13.6409 18.2697 12.9655C18.2487 11.6002 17.687 10.299 16.7078 9.34727C15.7286 8.39559 14.412 7.87113 13.0466 7.88893Z">
+            </path>
+          </svg>
+        </a>
+      </li>
+    </ul>
+  </div>
+</div>
+        <div class="modal__content-wrapper modal__content-wrapper--reg" id="modal-reg">
+  <p class="modal__title">вступить в ассоциацию</p>
+  <div class="modal__text">
+    <p class="modal__text-item">
+      Членом АСКЛИН может стать врач, биолог или медицинская сестра (техник),
+      профессиональный интерес которых лежит в области клинической
+      нейрофизиологии.
+    </p>
+    <p class="modal__text-item">
+      На основании Устава деятельности нашей организации членство в Ассоциации
+      является платным. Собранные взносы в 2020 году планируется потратить на
+      обновление дизайна сайта и значительное расширение его функционала. В
+      конце года для действительных членов общества будет опубликован подробный
+      отчет о структуре сбора средств и проведенных тратах.
+    </p>
+    <p class="modal__text-item">
+      В 2020 году размер ежегодной оплаты составит 500 (пятьсот) рублей.
+      Вступительный взнос, уплачиваемый при первоначальном вступлении в
+      Ассоциацию, так же составит 500 рублей, однако вступившие до 1 марта 2020
+      года будут освобождены от его уплаты.
+    </p>
+    <p class="modal__text-item">
+      Бланки для оплаты можно скачать в разделе Учредительные документы.
+    </p>
+    <p class="modal__text-item">
+      Прошу включить меня в члены Ассоциации специалистов по клинической
+      нейрофизиологии.
+    </p>
+    <p class="modal__text-item">О себе сообщаю следующие сведения:</p>
+  </div>
+  <form class="modal__registration registration" action>
+    <div class="registration__input-row flex">
+      <label class="registration__input-wrapper" for="registration-username">
+        <input
+          class="registration__input-text"
+          id="registration-username"
+          name="User Name"
+          type="text"
+          placeholder="Фамилия, Имя, Отчество"
+          required
+        />
+      </label>
+    </div>
+
+    <div class="registration__input-row flex">
+      <label
+        class="registration__input-wrapper registration__input-wrapper--3 registration__input-wrapper--fake-ph"
+        for="registration-borth-date"
+      >
+        <input
+          class="registration__input-text"
+          id="registration-borth-date"
+          name="Borth date"
+          type="date"
+          inputmode="numeric"
+          required
+        />
+        <span class="registration__fake-ph">Дата рождения</span>
+      </label>
+      <label
+        class="registration__input-wrapper registration__input-wrapper--3"
+        for="registration-city"
+      >
+        <input
+          class="registration__input-text"
+          id="registration-city"
+          name="City"
+          type="text"
+          placeholder="Город"
+          required
+        />
+      </label>
+      <label
+        class="registration__input-wrapper registration__input-wrapper--3"
+        for="registration-email"
+      >
+        <input
+          class="registration__input-text"
+          id="registration-email"
+          name="Email"
+          type="email"
+          placeholder="e-mail"
+          inputmode="email"
+          required
+        />
+      </label>
+    </div>
+
+    <div class="registration__input-row flex">
+      <label
+        class="registration__input-wrapper registration__input-wrapper--2"
+        for="registration-main-spec"
+      >
+        <input
+          class="registration__input-text"
+          id="registration-main-spec"
+          name="Main specialization"
+          type="text"
+          placeholder="Основная специальность"
+          required
+        />
+      </label>
+      <label
+        class="registration__input-wrapper registration__input-wrapper--2 registration__input-wrapper--sub-ph"
+        for="registration-add-spec"
+      >
+        <input
+          class="registration__input-text"
+          id="registration-add-spec"
+          name="Additional specialization"
+          type="text"
+          placeholder="Дополнительная специальность"
+        />
+        <span class="registration__sub-ph">*при наличии</span>
+      </label>
+    </div>
+
+    <div class="registration__input-row flex">
+      <label
+        class="registration__input-wrapper registration__input-wrapper--2"
+        for="registration-workplace"
+      >
+        <input
+          class="registration__input-text"
+          id="registration-workplace"
+          name="Work place"
+          type="text"
+          placeholder="Место работы"
+          required
+        />
+      </label>
+      <label
+        class="registration__input-wrapper registration__input-wrapper--2"
+        for="registration-work-pos"
+      >
+        <input
+          class="registration__input-text"
+          id="registration-work-pos"
+          name="Work position"
+          type="text"
+          placeholder="Должность"
+          required
+        />
+      </label>
+    </div>
+
+    <div class="registration__input-row flex">
+      <label class="registration__input-wrapper" for="registration-comment">
+        <textarea
+          class="registration__comment-field registration__input-text"
+          id="registration-comment"
+          name="Registration comment"
+          placeholder="Комментарии"
+        ></textarea>
+      </label>
+    </div>
+
+    <div class="registration__input-row flex">
+      <label class="registration__checkbox" for="registration-checkbox">
+        <input
+          class="registration__checkbox-input"
+          id="registration-checkbox"
+          name="Registration checkbox"
+          type="checkbox"
+          required
+        />
+        <span class="registration__checkbox-descr">
+          я согласен на отправку персональных данных и принимаю
+          <a class="registration__checkbox-link" href="#"
+            >условия обработки и хранения информации</a
+          >
+        </span>
+      </label>
+    </div>
+
+    <button class="registration__btn blue-btn" type="submit">отправить</button>
+  </form>
+</div>
+
+        <div class="modal__content-wrapper"
+  id="modal-settings">
+  <p class="modal__title">
+    Редактировать
+    профиль
+  </p>
+  <form class="modal__settings settings"
+    action="#">
+    <div class="settings__top-row flex">
+
+      <label class="settings__input-wrapper settings__input-wrapper--picture flex"
+        for="settings-user-photo">
+        <input class="settings__user-photo"
+          id="settings-user-photo"
+          name="User photo"
+          type="file"
+          accept="image/*">
+        <img class="settings__uploaded-photo"
+          src="images/icons/nopicture.svg"
+          alt="Загруженное изображение">
+        <span class="settings__picture-descr">
+          сменить фото
+        </span>
+      </label>
+
+      <div class="settings__top-box">
+        <label class="settings__input-wrapper"
+          for="settings-username">
+          <input class="settings__input-text"
+            id="settings-username"
+            name="User Name"
+            type="text"
+            placeholder="Фамилия, Имя, Отчество"
+            required>
+        </label>
+        <label for="settings-tel"
+          class="settings__input-wrapper">
+          <input class="settings__input-text"
+            id="settings-tel"
+            name="User phone"
+            type="tel"
+            placeholder="телефон"
+            required>
+        </label>
+      </div>
+
+    </div>
+
+    <div class="settings__input-row flex">
+      <label class="settings__input-wrapper settings__input-wrapper--3 settings__input-wrapper--fake-ph"
+        for="settings-borth-date">
+        <input class="settings__input-text"
+          id="settings-borth-date"
+          name="Borth date"
+          type="date"
+          inputmode="numeric"
+          required>
+        <span class="settings__fake-ph">Дата рождения</span>
+      </label>
+      <label class="settings__input-wrapper settings__input-wrapper--3"
+        for="settings-city">
+        <input class="settings__input-text"
+          id="settings-city"
+          name="City"
+          type="text"
+          placeholder="Город"
+          required>
+      </label>
+      <label class="settings__input-wrapper settings__input-wrapper--3"
+        for="settings-email">
+        <input class="settings__input-text"
+          id="settings-email"
+          name="Email"
+          type="text"
+          placeholder="e-mail"
+          inputmode="email"
+          required>
+      </label>
+    </div>
+
+    <div class="settings__workplaces-wrapper">
+      <div class="settings__workplace">
+        <div class="settings__input-row flex">
+          <label class="settings__input-wrapper settings__input-wrapper--2"
+            for="settings-main-spec">
+            <input class="settings__input-text"
+              id="settings-main-spec"
+              name="Main specialization"
+              type="text"
+              placeholder="Основная специальность"
+              required>
+          </label>
+          <label class="settings__input-wrapper settings__input-wrapper--2 settings__input-wrapper--sub-ph"
+            for="settings-add-spec">
+            <input class="settings__input-text"
+              id="settings-add-spec"
+              name="Additional specialization"
+              type="text"
+              placeholder="Дополнительная специальность">
+            <span class="settings__sub-ph">*при наличии</span>
+          </label>
+        </div>
+
+        <div class="settings__input-row flex">
+
+          <label class="settings__input-wrapper settings__input-wrapper--3"
+            for="settings-workplace">
+            <input class="settings__input-text"
+              id="settings-workplace"
+              name="Work place"
+              type="text"
+              placeholder="Место работы"
+              required>
+          </label>
+
+          <label class="settings__input-wrapper settings__input-wrapper--3"
+            for="settings-work-pos">
+            <input class="settings__input-text"
+              id="settings-work-pos"
+              name="Work position"
+              type="text"
+              placeholder="Должность"
+              required>
+          </label>
+
+          <label class="settings__input-wrapper settings__input-wrapper--3"
+            for="settings-work-date">
+            <input class="settings__input-text"
+              id="settings-work-date"
+              name="Work date"
+              type="date"
+              placeholder="Даты"
+              required>
+          </label>
+        </div>
+      </div>
+
+      <button class="settings__add-workplace"
+        type="button"
+        data-title="Для добавления нажмите на кнопку, для удаления - нажмите правой кнопкой (долгим нажатием - для телефонов)">добавить
+        должность</button>
+      <span class="settings__button-hint"></span>
+    </div>
+
+    <div class="settings__input-row flex">
+      <label class="settings__input-wrapper settings__input-wrapper--2 settings__input-wrapper--sub-ph"
+        for="settings-insta">
+        <input class="settings__input-text"
+          id="settings-insta"
+          name="Instagram"
+          type="url"
+          inputmode="url"
+          placeholder="Страница Instagram"
+          required>
+        <span class="settings__sub-ph">*при наличии</span>
+      </label>
+      <label class="settings__input-wrapper settings__input-wrapper--2 settings__input-wrapper--sub-ph"
+        for="settings-fb">
+        <input class="settings__input-text"
+          id="settings-fb"
+          name="facebook"
+          type="url"
+          inputmode="url"
+          placeholder="Страница Facebook"
+          required>
+        <span class="settings__sub-ph">*при наличии</span>
+      </label>
+    </div>
+
+    <div class="settings__input-row flex">
+      <label class="settings__input-wrapper"
+        for="settings-interests">
+        <input class="settings__input-text"
+          id="settings-interests"
+          name="Science interests"
+          type="text"
+          placeholder="Научные интересы"
+          required>
+      </label>
+    </div>
+
+    <div class="settings__input-row flex">
+      <label class="settings__input-wrapper"
+        for="settings-comment">
+        <textarea class="settings__comment-field settings__input-text"
+          id="settings-comment"
+          name="settings comment"
+          placeholder="О себе"></textarea>
+      </label>
+    </div>
+    <button class="settings__btn blue-btn"
+      type="submit">отправить</button>
+  </form>
+</div>
+        <div class="modal__content-wrapper modal__content-wrapper--error"
+  id="modal-error">
+  <p class="modal__error-text">
+    Произошла непредвиденная ошибка. Попробуйте, пожалуйста, снова.
+  </p>
+</div>
+      </div>
+    </div>
+    <footer class="footer">
+  <div class="container">
+    <!-- SECTION - footer menu -->
+    <div class="footer__menu menu">
+      <ul class="menu__list flex">
+        <li class="menu__item">
+          <a class="menu__link" href="about.html">об ассоциации</a>
+        </li>
+        <li class="menu__item">
+          <a class="menu__link" href="events.html">Мероприятия</a>
+        </li>
+        <li class="menu__item">
+          <a class="menu__link" href="recomendations.html">Рекомендации</a>
+        </li>
+        <li class="menu__item">
+          <a class="menu__link" href="specialists.html">Специалисты</a>
+        </li>
+        <li class="menu__item">
+          <a class="menu__link" href="education.html">Образование</a>
+        </li>
+        <li class="menu__item">
+          <a class="menu__link" href="documents.html"
+            >Учредительные документы</a
+          >
+        </li>
+      </ul>
+    </div>
+    <!-- !SECTION - footer menu -->
+
+    <!-- SECTION - footer address -->
+    <address class="footer__address flex">
+      <ul class="footer__icon-list icon-list flex">
+        <li class="icon-list__item">
+          <a href="https://facebook.com" class="icon-list__link">
+            <svg
+              class="icon-list__img"
+              height="38px"
+              width="38px"
+              viewBox="0 0 26 26"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M23.4053 0H2.66121C1.95541 0 1.27852 0.280376 0.77945 0.77945C0.280376 1.27852 0 1.95541 0 2.66121L0 23.4053C0.0173604 24.0995 0.305382 24.7594 0.802586 25.2442C1.29979 25.729 1.96679 26.0002 2.66121 26H23.4053C24.0882 25.9831 24.7384 25.7043 25.2214 25.2214C25.7043 24.7384 25.9831 24.0882 26 23.4053V2.66121C26.0002 1.96679 25.729 1.29979 25.2442 0.802586C24.7594 0.305382 24.0995 0.0173604 23.4053 0V0ZM22.0747 2.66121V6.49335H19.4135C19.2352 6.47934 19.056 6.50414 18.8882 6.56605C18.7204 6.62797 18.568 6.72552 18.4415 6.85199C18.3151 6.97846 18.2175 7.13084 18.1556 7.29863C18.0937 7.46643 18.0689 7.64565 18.0829 7.82395V10.4852H21.9816V14.3838H18.2027V23.4852H14.304V14.304H11.6428V10.4053H14.304V7.14534C14.3349 5.95434 14.8263 4.8217 15.6749 3.98548C16.5236 3.14926 17.6633 2.67458 18.8547 2.66121H22.0747Z"
+              />
+            </svg>
+          </a>
+        </li>
+        <li class="icon-list__item">
+          <a href="https://instagram.com" class="icon-list__link">
+            <svg
+              class="icon-list__img"
+              height="38px"
+              width="38px"
+              viewBox="0 0 26 27"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M3.34662 0.00100388H22.6534C23.0956 -0.00996443 23.5354 0.0690437 23.9461 0.233232C24.3568 0.39742 24.7299 0.643363 25.0426 0.956129C25.3554 1.2689 25.6013 1.64196 25.7655 2.05268C25.9297 2.4634 26.0087 2.9032 25.9978 3.34538V22.6521C26.0143 23.0976 25.9394 23.5418 25.7777 23.9572C25.616 24.3726 25.3709 24.7506 25.0575 25.0676C24.7442 25.3847 24.3692 25.6343 23.9557 25.8009C23.5423 25.9675 23.099 26.0477 22.6534 26.0365H3.34662C2.90096 26.0477 2.45774 25.9675 2.04426 25.8009C1.63077 25.6343 1.2558 25.3847 0.942458 25.0676C0.629112 24.7506 0.384034 24.3726 0.22233 23.9572C0.0606262 23.5418 -0.0142757 23.0976 0.00224165 22.6521V3.34538C-0.00872666 2.9032 0.0702814 2.4634 0.234469 2.05268C0.398658 1.64196 0.6446 1.2689 0.957367 0.956129C1.27013 0.643363 1.6432 0.39742 2.05392 0.233232C2.46463 0.0690437 2.90443 -0.00996443 3.34662 0.00100388ZM18.9626 2.89236C18.6527 2.89582 18.3565 3.02046 18.1373 3.23961C17.9182 3.45876 17.7935 3.75499 17.7901 4.06489V6.87629C17.7935 7.18619 17.9182 7.48242 18.1373 7.70157C18.3565 7.92071 18.6527 8.04536 18.9626 8.04882H21.9072C22.2182 8.04882 22.5164 7.92529 22.7363 7.7054C22.9562 7.4855 23.0798 7.18727 23.0798 6.87629V4.06489C23.0798 3.75391 22.9562 3.45567 22.7363 3.23578C22.5164 3.01589 22.2182 2.89236 21.9072 2.89236H18.9626ZM23.0931 11.0068H20.8013C21.0208 11.7327 21.1331 12.4869 21.1344 13.2453C21.0924 15.3539 20.2188 17.3606 18.7039 18.8281C17.189 20.2955 15.1556 21.1049 13.0466 21.0799C10.9354 21.1085 8.89856 20.3007 7.38078 18.8328C5.86301 17.365 4.98756 15.3563 4.94552 13.2453C4.95762 12.4836 5.08798 11.7284 5.33192 11.0068H2.89359V22.0126C2.8971 22.2859 3.00814 22.5468 3.20266 22.7389C3.39719 22.9309 3.65954 23.0386 3.93288 23.0385H22.0538C22.3271 23.0386 22.5895 22.9309 22.784 22.7389C22.9785 22.5468 23.0896 22.2859 23.0931 22.0126V11.0068ZM13.0466 7.88893C12.3695 7.87835 11.6968 8.00128 11.0672 8.25068C10.4375 8.50009 9.86313 8.8711 9.37687 9.34251C8.89061 9.81392 8.50197 10.3765 8.23317 10.9981C7.96436 11.6198 7.82064 12.2883 7.81022 12.9655C7.83476 14.3308 8.39984 15.6306 9.38151 16.5798C10.3632 17.529 11.6813 18.05 13.0466 18.0286C13.7221 18.0392 14.393 17.9166 15.021 17.6679C15.6491 17.4192 16.222 17.0491 16.707 16.579C17.192 16.1088 17.5797 15.5477 17.8478 14.9277C18.1159 14.3076 18.2593 13.6409 18.2697 12.9655C18.2487 11.6002 17.687 10.299 16.7078 9.34727C15.7286 8.39559 14.412 7.87113 13.0466 7.88893Z"
+              />
+            </svg>
+          </a>
+        </li>
+        <li class="icon-list__item">
+          <a href="https://youtube.com" class="icon-list__link">
+            <svg
+              class="icon-list__img"
+              height="38px"
+              width="53px"
+              viewBox="0 0 53 38"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M51.8591 5.79525C51.5546 4.67838 50.9639 3.66032 50.1453 2.84175C49.3267 2.02317 48.3087 1.43243 47.1918 1.12794C43.056 0 26.4741 0 26.4741 0C26.4741 0 9.90509 0 5.75636 1.08904C4.6401 1.40738 3.62449 2.00747 2.80712 2.83165C1.98975 3.65583 1.3981 4.67639 1.08904 5.79525C0 9.94398 0 18.5396 0 18.5396C0 18.5396 0 27.226 1.08904 31.271C1.39117 32.3891 1.98112 33.4084 2.80006 34.2273C3.61899 35.0463 4.63831 35.6362 5.75636 35.9384C9.94398 37.0793 26.5 37.0793 26.5 37.0793C26.5 37.0793 43.0819 37.0793 47.2436 35.9902C48.3605 35.6857 49.3786 35.095 50.1971 34.2764C51.0157 33.4578 51.6065 32.4398 51.911 31.3229C53 27.1742 53 18.5785 53 18.5785C53 18.5785 53 9.94398 51.8591 5.79525ZM21.1974 26.5389V10.6052L35.0049 18.5396L21.1974 26.5389Z"
+              />
+            </svg>
+          </a>
+        </li>
+      </ul>
+
+      <div class="footer__contact-box">
+        <div class="footer__contact-item">
+          <span class="footer__contact-title footer__contact-title--email"
+            >E-MAIL:</span
+          >
+          <a href="mailto:info@asclin.ru" class="footer__contact-link"
+            >info@asclin.ru</a
+          >
+        </div>
+
+        <div class="footer__contact-item">
+          <span class="footer__contact-title footer__contact-title--point"
+            >Адрес:</span
+          >
+          <a
+            href="https://goo.gl/maps/JwMDGuak2w37YEh87"
+            class="footer__contact-link"
+            >г. Москва, Мосрентген поселение,
+            <br />
+            км. Киевское Ш 21-й, домовладение 3, стр. 1
+          </a>
+        </div>
+      </div>
+    </address>
+    <!-- !SECTION - footer address -->
+
+    <!-- SECTION - footer copuright -->
+    <div class="footer__copyright flex">
+      <p class="footer__copyright-text">
+        © asclin Ассоциация специалистов по клинической нейрофизиологии 2020
+      </p>
+      <a class="footer__logo logo" href="index.html">
+        <img
+          class="logo__picture"
+          src="images/logo-footer.png"
+          alt="ASCLIN логотип"
+        />
+      </a>
+    </div>
+    <!-- !SECTION - footer address -->
+  </div>
+</footer>
+ <script src="js/libs.min.js"></script>
+<script src="js/main.min.js"></script>
+  </body>
+</html>

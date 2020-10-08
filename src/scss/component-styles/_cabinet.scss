@@ -1,0 +1,84 @@
+.cabinet {
+  margin-bottom: 55px;
+
+  .account {
+    display: block;
+    margin-top: 95px;
+    position: relative;
+
+    &::before {
+      top: -56px;
+      right: -40px;
+    }
+  }
+
+  &__title {
+    letter-spacing: -0.01em;
+
+    &::after {
+      left: 50%;
+    }
+  }
+
+  &__counter {
+    margin-top: 110px;
+  }
+
+  &__counter-item {
+
+    &--like {
+      &::before {
+        background-image: url(../images/icons/heart.svg);
+      }
+
+      &::after {
+        content: "лайки";
+      }
+    }
+
+    &--comment {
+      &::before {
+        background-image: url(../images/icons/message.svg);
+      }
+
+      &::after {
+        content: "комментарии";
+      }
+    }
+
+    &--answers {
+      &::before {
+        background-image: url(../images/icons/email.svg);
+      }
+
+      &::after {
+        content: "ответы";
+      }
+    }
+  }
+
+
+  &__button-box {
+    margin-top: 135px;
+  }
+
+  &__btn-settings {
+    margin: 0 30px 0 auto;
+    font-style: italic;
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 1.7;
+    text-decoration: underline;
+    text-transform: uppercase;
+    color: $text;
+    border: none;
+    background-color: transparent;
+    display: block;
+    cursor: pointer;
+
+    &:hover,
+    &:focus {
+      text-decoration: none;
+    }
+  }
+}

@@ -1,0 +1,166 @@
+.account {
+  background-color: #ecedef;
+  border-radius: 70px;
+  padding: 0 28px 55px;
+  display: none;
+  z-index: 1;
+
+  &::before {
+    @include fake-bg;
+    position: absolute;
+    height: auto;
+    width: auto;
+    top: 95px;
+    right: 17px;
+    width: 50%;
+    max-width: 470px;
+    height: 50%;
+    max-height: 550px;
+    z-index: 0;
+  }
+
+  &__error-text {
+    text-align: center;
+    font-weight: 700;
+    font-size: 34px;
+    position: relative;
+    z-index: 1;
+  }
+
+  &__content-top {
+    align-items: flex-start;
+    position: relative;
+    top: -97px;
+  }
+
+  &__content-img {
+    flex: 0 1 40%;
+    max-width: 480px;
+    min-width: 20%;
+    height: 366px;
+    object-fit: cover;
+    object-position: center 25%;
+    border-radius: 40px;
+    margin-left: -50px;
+  }
+
+  &__content-right {
+    flex: 0 0 60%;
+    margin-left: 38px;
+    text-align: right;
+    color: $main;
+    word-wrap: break-word;
+  }
+
+  &__user-surname {
+    font-size: 84px;
+    line-height: 102px;
+    word-break: break-all;
+  }
+
+  &__user-name {
+    font-size: 60px;
+    line-height: 73px;
+    word-break: break-all;
+  }
+
+  &__user-surname,
+  &__user-name {
+    margin: 0;
+    text-transform: uppercase;
+    font-weight: 700;
+    letter-spacing: -0.02em;
+  }
+
+  &__user-special {
+    font-weight: 500;
+    font-style: italic;
+  }
+
+  &__user-exp {
+    font-weight: 600;
+    margin-top: 24px;
+    margin-bottom: 0;
+  }
+
+  &__exp-title {
+    text-transform: uppercase;
+    margin-right: 0.5em;
+  }
+
+  &__user-special,
+  &__user-exp,
+  &__user-forum {
+    font-size: 26px;
+    line-height: 1;
+    text-transform: uppercase;
+  }
+
+  &__user-data,
+  &__user-special {
+    margin-top: 16px;
+    margin-bottom: 0;
+  }
+
+  &__data-title {
+    margin-right: 6px;
+  }
+
+  a.modal__data-value:hover {
+    text-decoration: underline;
+  }
+
+  &__user-forum {
+    display: block;
+    margin-top: 19px;
+    margin-bottom: 0;
+    font-weight: 600;
+    text-decoration: underline;
+    width: fit-content;
+    margin-left: auto;
+
+    &:hover {
+      text-decoration: none;
+    }
+
+  }
+
+  &__content-bottom {
+    position: relative;
+    margin-top: -61px;
+    z-index: 1;
+  }
+
+  &__user-descr {
+    font-weight: 300;
+    font-size: 22px;
+    line-height: 1.45;
+    color: #000000;
+  }
+
+  &__info-box {
+    margin-top: 40px;
+  }
+
+  &__icon-list {
+    justify-content: start;
+    margin-top: 46px;
+
+    .icon-list__item {
+      height: 38px;
+      width: 38px;
+    }
+
+    .icon-list__item+.icon-list__item {
+      margin-left: 62px;
+    }
+
+    & .icon-list__link .icon-list__img {
+      transition: all 0.26s;
+    }
+
+    & .icon-list__link:hover .icon-list__img {
+      fill: $grey;
+    }
+  }
+}

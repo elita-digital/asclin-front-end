@@ -1,0 +1,35 @@
+.white-btn {
+  display: block;
+  font-weight: 500;
+  font-size: 18px;
+  background: #FFFFFF;
+  border-radius: 26px;
+  color: #333333;
+  padding: 8px 20px;
+  width: 285px;
+  border: none;
+  transition: all 0.26s;
+  text-transform: uppercase;
+  text-align: center;
+  line-height: 1.25;
+
+  &:hover {
+    box-shadow: 0px 4px $grey;
+    transform: translateY(-2px);
+  }
+
+  &:focus {
+    outline: 0px solid transparent;
+    box-shadow: 0px 4px $grey;
+  }
+
+  &:active {
+    box-shadow: 0 2px $grey;
+    transform: translateY(0);
+  }
+
+  // &--invert {
+  //   background-color: $main;
+  //   color: #ffffff;
+  // }
+}

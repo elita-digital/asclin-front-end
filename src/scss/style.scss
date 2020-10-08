@@ -1,0 +1,62 @@
+//STYLES-SECTION: local fonts
+@import 'fonts';
+//!STYLES-SECTION: local fonts
+
+//STYLES-SECTION: global and BEM-blocks
+
+//STYLES-SECTION: global styles
+@import 'vars';
+@import 'global';
+//!STYLES-SECTION: global styles
+
+//STYLES-SECTION: BEM-blocks
+@import 'bem-blocks/logo';
+@import 'bem-blocks/icon-list';
+@import 'bem-blocks/menu';
+@import 'bem-blocks/white-btn';
+@import 'bem-blocks/blue-btn';
+@import 'bem-blocks/info-box';
+@import 'bem-blocks/account';
+@import 'bem-blocks/input-text';
+@import 'bem-blocks/checkbox';
+@import 'bem-blocks/section-title';
+@import 'bem-blocks/counter';
+@import 'bem-blocks/read-more';
+@import 'bem-blocks/content-item';
+@import 'bem-blocks/vertical-item';
+@import 'bem-blocks/horizontal-item';
+//!STYLES-SECTION: BEM-blocks
+
+//!STYLES-SECTION: global and BEM-blocks
+
+
+
+//STYLES-SECTION: sections and components
+@import 'component-styles/header';
+@import 'component-styles/modal';
+@import 'component-styles/contact-form';
+@import 'component-styles/footer';
+@import 'component-styles/registration-and-settings';
+@import 'component-styles/news';
+@import 'component-styles/partners';
+@import 'component-styles/cabinet';
+@import 'component-styles/events';
+@import 'component-styles/event-about';
+@import 'component-styles/about';
+@import 'component-styles/recomendations';
+@import 'component-styles/spec';
+@import 'component-styles/my-articles';
+@import 'component-styles/forum';
+@import 'component-styles/new-article';
+@import 'component-styles/edu';
+//!STYLES-SECTION: sections
+
+//STYLES-SECTION: IE-styles
+@import 'component-styles/ie-active';
+//!STYLES-SECTION
+
+
+
+//STYLES-SECTION: media queries
+@import 'media';
+//!STYLES-SECTION: media queries

@@ -1,0 +1,165 @@
+html {
+  box-sizing: border-box;
+  font-size: 16px;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+html,
+body {
+  height: 100%;
+  position: relative;
+  max-width: 100vw;
+  overflow-x: hidden;
+}
+
+body {
+  font-family: 'Montserrat', 'Arial', sans-serif;
+  line-height: 1.75;
+  color: $text;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  height: auto;
+}
+
+a {
+  color: $text;
+  text-decoration: none;
+
+  &:visited {
+    color: $main;
+  }
+}
+
+button {
+  cursor: pointer;
+}
+
+button:focus,
+input:focus,
+textarea:focus,
+a:focus {
+  outline: transparent;
+}
+
+h1,
+.like-h1 {
+  font-weight: bold;
+  font-size: 110px;
+  line-height: 134px;
+  margin: 0;
+}
+
+h2,
+.like-h2 {
+  @extend %h2;
+}
+
+h3,
+.like-h3 {
+  font-weight: bold;
+  font-size: 18px;
+  line-height: 1.5;
+  text-transform: uppercase;
+  font-weight: 700;
+}
+
+.page-content {
+  max-width: 100vw;
+  // overflow-x: hidden;
+}
+
+.container {
+  max-width: 1200px;
+  padding: 0 25px;
+  margin: 0 auto;
+}
+
+.flex {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.no-scroll {
+  height: 100vh;
+  max-height: 100vh;
+  overflow: hidden;
+}
+
+[class*=--divider-left],
+[class*=--divider-right] {
+  position: relative;
+  @extend %divider;
+}
+
+[class*=--divider-right]::after {
+  left: 50%;
+}
+
+[class*=--divider-left]::after {
+  right: 50%;
+  transform: rotate(180deg);
+}
+
+[class*=--bg-right],
+[class*=--bg-left] {
+  position: relative;
+  z-index: 2;
+
+  * {
+    position: relative;
+    z-index: 1;
+  }
+
+  &::before {
+    content: '';
+    position: absolute;
+    height: 110%;
+    width: calc(100vw - 20%);
+    top: 20%;
+    background: #ECEDEF;
+    z-index: 0;
+  }
+}
+
+[class*=--bg-right]::before {
+  left: 20%;
+  border-radius: 60px 0px 0px 60px;
+}
+
+[class*=--bg-left]::before {
+  right: 20%;
+  border-radius: 0px 60px 60px 0px;
+}
+
+.section--bg {
+  position: relative;
+  padding: 71px 88px 150px;
+  background: #ECEDEF;
+  border-radius: 70px;
+
+  &::before {
+    @include fake-bg;
+    position: absolute;
+    height: auto;
+    width: auto;
+    top: -7%;
+    right: -5%;
+    width: 50%;
+    max-width: 470px;
+    height: 50%;
+    max-height: 550px;
+    z-index: 0;
+  }
+
+  &>* {
+    position: relative;
+    z-index: 1;
+  }
+}

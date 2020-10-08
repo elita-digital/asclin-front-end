@@ -1,0 +1,40 @@
+.partners {
+  margin-bottom: 150px;
+  padding: 55px 0 90px;
+
+  &::before {
+    top: 0;
+    right: 50%;
+  }
+
+  &__inner {
+    margin-top: 40px;
+  }
+
+  &__item {
+    height: 75px;
+
+    object-fit: contain;
+  }
+
+  .swiper-slide {
+    width: 25%;
+
+    text-align: center;
+  }
+}
+
+.ie-active .partners__inner .swiper-wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+
+  margin-left: -32px;
+
+  .swiper-slide {
+    flex: 0 0 auto;
+
+    width: auto;
+    margin: 32px 0 0 32px;
+  }
+}

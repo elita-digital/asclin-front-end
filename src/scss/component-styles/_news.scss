@@ -1,0 +1,16 @@
+.news {
+	margin-bottom: 116px;
+
+	&__item {
+		margin-top: 64px;
+
+		&+& {
+			margin-top: 97px;
+		}
+
+		&::before {
+			top: 85px;
+			height: 110%;
+		}
+	}
+}

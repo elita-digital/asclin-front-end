@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="ru">
+  @@include('components/_head.html')
+
+  <body>
+    @@include('components/_header.html')
+    <main class="page-content spec">
+      <div class="container">
+        <h2 class="spec__title section-title">
+          специалисты
+          <span class="section-title__shadow">специалисты</span>
+        </h2>
+        <section class="spec__content spec__content--bg-right flex">
+          <article class="past-events__item vertical-item">
+            <h3 class="vertical-item__name">фамилия И.О.</h3>
+            <img
+              class="vertical-item__picture"
+              src="images/profile-image.jpg"
+              alt="Фото конференции"
+            />
+            <p class="vertical-item__subtitle">Специализация</p>
+            <p class="vertical-item__text">Краткая информаци о специалисте</p>
+            <p class="vertical-item__text">
+              Далеко-далеко за словесными горами в стране гласных и согласных
+              живут рыбные тексты. Эта о свой там снова родного ее продолжил
+              рукопись семантика вершину, повстречался переписали! Всеми
+              большого его, пунктуация жаренные дал, даль языком страну
+              единственное семантика маленький составитель власти ведущими
+              реторический своего свой точках грустный.
+            </p>
+            <a href="event-about.html" class="vertical-item__link read-more"
+              >Подробнее</a
+            >
+          </article>
+          <article class="past-events__item vertical-item">
+            <h3 class="vertical-item__name">фамилия И.О.</h3>
+            <img
+              class="vertical-item__picture"
+              src="images/profile-image.jpg"
+              alt="Фото конференции"
+            />
+            <p class="vertical-item__subtitle">Специализация</p>
+            <p class="vertical-item__text">Краткая информаци о специалисте</p>
+            <p class="vertical-item__text">
+              Далеко-далеко за словесными горами в стране гласных и согласных
+              живут рыбные тексты. Эта о свой там снова родного ее продолжил
+              рукопись семантика вершину, повстречался переписали! Всеми
+              большого его, пунктуация жаренные дал, даль языком страну
+              единственное семантика маленький составитель власти ведущими
+              реторический своего свой точках грустный.
+            </p>
+            <a href="event-about.html" class="vertical-item__link read-more"
+              >Подробнее</a
+            >
+          </article>
+          <article class="past-events__item vertical-item">
+            <h3 class="vertical-item__name">фамилия И.О.</h3>
+            <img
+              class="vertical-item__picture"
+              src="images/profile-image.jpg"
+              alt="Фото конференции"
+            />
+            <p class="vertical-item__subtitle">Специализация</p>
+            <p class="vertical-item__text">Краткая информаци о специалисте</p>
+            <p class="vertical-item__text">
+              Далеко-далеко за словесными горами в стране гласных и согласных
+              живут рыбные тексты. Эта о свой там снова родного ее продолжил
+              рукопись семантика вершину, повстречался переписали! Всеми
+              большого его, пунктуация жаренные дал, даль языком страну
+              единственное семантика маленький составитель власти ведущими
+              реторический своего свой точках грустный.
+            </p>
+            <a href="event-about.html" class="vertical-item__link read-more"
+              >Подробнее</a
+            >
+          </article>
+        </section>
+        <div class="spec__divider spec__divider--divider-left"></div>
+      </div>
+    </main>
+    @@include('components/_contact-form.html')
+    <div class="modal">
+      <button class="modal__close">Закрыть окно</button>
+      <div class="modal__overlay"></div>
+      <div class="modal__box">
+        @@include('components/_modal-account.html')
+        @@include('components/_modal-reg.html')
+        @@include('components/_modal-settings.html')
+        @@include('components/_modal-error.html')
+      </div>
+    </div>
+    @@include('components/_footer.html') @@include('components/_scripts.html')
+  </body>
+</html>

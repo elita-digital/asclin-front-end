@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="ru">
+@@include('components/_head.html')
+
+<body>
+  @@include('components/_header.html')
+  <main class="page-content">
+    <section class='cabinet'>
+      <div class='container'>
+        <h2 class="section-title cabinet__title">личный кабинет
+          <span class="section-title__shadow">личный кабинет</span>
+        </h2>
+        <div class='cabinet__inner'>
+          <div class="cabinet__counter flex">
+            <span class="cabinet__counter-item counter-item cabinet__counter-item--like flex">4</span>
+            <span class="cabinet__counter-item counter-item cabinet__counter-item--comment flex">3</span>
+            <span class="cabinet__counter-item counter-item cabinet__counter-item--answers flex">7</span>
+          </div>
+        </div>
+        <div class="cabinet__button-box cabinet__button-box--divider-left">
+          <button type="button"
+            class="cabinet__btn-settings js-modal-call"
+            data-modal="#modal-settings">
+            Редактировать профиль
+          </button>
+        </div>
+        @@include('components/_modal-account.html')
+      </div>
+    </section>
+  </main>
+  @@include('components/_contact-form.html')
+  <div class="modal">
+    <button class="modal__close">
+      Закрыть окно
+    </button>
+    <div class="modal__overlay"></div>
+    <div class="modal__box">
+      @@include('components/_modal-account.html')
+      @@include('components/_modal-reg.html')
+      @@include('components/_modal-settings.html')
+      @@include('components/_modal-error.html')
+    </div>
+  </div>
+  @@include('components/_footer.html')
+  @@include('components/_scripts.html')
+</body>
+
+</html>

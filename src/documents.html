@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="ru">
+  @@include('components/_head.html')
+
+  <body>
+    @@include('components/_header.html')
+
+    <main class="page-content recomendations">
+      <div class="container">
+        <h2 class="recomendations__title section-title">
+          Учредительные <br />документы
+          <span class="section-title__shadow"
+            >Учредительные <br />документы</span
+          >
+        </h2>
+
+        <div class="recomendations__grid recomendations__grid--divider-left">
+          <a
+            class="recomendations__link recomendations__link--small-text recomendations__link--left flex"
+            href="#"
+            download="Квитанция членский взнос"
+          >
+            <span class="recomendations__link-title"
+              >Квитанция членский взнос</span
+            >
+            <span class="recomendations__link-subtext">скачать</span>
+          </a>
+          <a
+            class="recomendations__link recomendations__link--small-text recomendations__link--center flex"
+            href="#"
+            download="Квитанция регистрационный взнос"
+          >
+            <span class="recomendations__link-title"
+              >Квитанция регистрационный взнос</span
+            >
+            <span class="recomendations__link-subtext">скачать</span>
+          </a>
+          <a
+            class="recomendations__link recomendations__link--small-text recomendations__link--right flex"
+            href="#"
+            download="ИНН"
+          >
+            <span class="recomendations__link-title">ИНН</span>
+            <span class="recomendations__link-subtext">скачать</span>
+          </a>
+          <a
+            class="recomendations__link recomendations__link--small-text recomendations__link--center flex"
+            href="#"
+            download="Свидетельство о регистрации"
+          >
+            <span class="recomendations__link-title"
+              >Свидетельство о регистрации</span
+            >
+            <span class="recomendations__link-subtext">скачать</span>
+          </a>
+          <a
+            class="recomendations__link recomendations__link--small-text recomendations__link--right flex"
+            href="#"
+            download="Карточка предприятия"
+          >
+            <span class="recomendations__link-title">Карточка предприятия</span>
+            <span class="recomendations__link-subtext">скачать</span>
+          </a>
+        </div>
+      </div>
+    </main>
+
+    @@include('components/_contact-form.html')
+    <div class="modal">
+      <button class="modal__close">Закрыть окно</button>
+      <div class="modal__overlay"></div>
+      <div class="modal__box">
+        @@include('components/_modal-account.html')
+        @@include('components/_modal-reg.html')
+        @@include('components/_modal-settings.html')
+        @@include('components/_modal-error.html')
+      </div>
+    </div>
+    @@include('components/_footer.html') @@include('components/_scripts.html')
+  </body>
+</html>

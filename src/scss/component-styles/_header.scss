@@ -1,0 +1,159 @@
+.header {
+  padding: 25px 0 75px;
+
+  background-image: linear-gradient(
+      to top,
+      rgba(19, 33, 59, 0.65),
+      rgba(19, 33, 59, 0.65)
+    ),
+    url(../images/header-bg.jpg);
+  background-repeat: no-repeat;
+  background-position: center top;
+  background-size: cover;
+
+  &__icon-list {
+    .icon-list__item {
+      .icon-list__link:focus {
+        outline: 1px solid #ffffff;
+      }
+
+      [href*="facebook"],
+      [href*="instagram"],
+      [href*="youtube"] {
+        height: 26px;
+        // width: 26px;
+
+        &:focus {
+          outline: 1px solid #ffffff;
+        }
+      }
+
+      &--lk {
+        width: 100px;
+        height: 36px;
+      }
+    }
+
+    .icon-list__img {
+      height: 100%;
+
+      transition: all 0.26s;
+
+      fill: #ffffff;
+      object-fit: contain;
+    }
+
+    .icon-list__link:hover .icon-list__img {
+      fill: $grey-bg-2;
+    }
+
+    .icon-list__item + .icon-list__item {
+      margin-left: 21px;
+    }
+  }
+
+  &__bottom {
+    margin-top: 103px;
+    padding-left: 36px;
+  }
+
+  &__box {
+    align-items: stretch;
+  }
+
+  &__title {
+    max-width: 555px;
+    padding-right: 32px;
+
+    text-align: right;
+
+    color: #ffffff;
+    border-right: 1px solid #ffffff;
+  }
+
+  &__title-sup {
+    letter-spacing: 0.02em;
+
+    line-height: 1;
+  }
+
+  &__title-sub {
+    display: block;
+
+    width: 100%;
+
+    letter-spacing: 0.01em;
+
+    font-size: 36px;
+    font-weight: 300;
+    line-height: 1.15;
+  }
+
+  &__menu .menu__list {
+    margin: 0 0 0 22px;
+  }
+
+  &__burger {
+    position: relative;
+
+    display: none;
+    align-items: center;
+
+    width: 44px;
+    height: 44px;
+    margin-left: 15px;
+    padding: 0;
+
+    border: none;
+    background-color: transparent;
+  }
+
+  &__burger-row {
+    position: relative;
+
+    display: block;
+
+    width: 100%;
+    height: 5px;
+
+    border-radius: 3px;
+    background-color: #ffffff;
+
+    &::before,
+    &::after {
+      position: absolute;
+      top: -12px;
+      left: 0;
+
+      width: 100%;
+      height: 5px;
+
+      content: "";
+      transition: all 0.26s;
+
+      border-radius: 3px;
+      background-color: #ffffff;
+    }
+
+    &::after {
+      top: 12px;
+    }
+
+    &--open {
+      background-color: transparent;
+
+      &::before {
+        top: 50%;
+
+        transform: rotate(45deg) translateY(-50%);
+      }
+
+      &::after {
+        top: 50%;
+        left: 2px;
+
+        transform: rotate(-45deg) translateY(-50%);
+      }
+    }
+  }
+}

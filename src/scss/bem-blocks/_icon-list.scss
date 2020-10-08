@@ -1,0 +1,17 @@
+.icon-list {
+  list-style: none;
+
+  &__item {
+    font-size: 0;
+  }
+
+  &__link {
+    display: block;
+    height: 100%;
+  }
+
+  &__img{
+    height: 100%;
+    object-fit: contain;
+  }
+}
