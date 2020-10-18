@@ -1,28 +1,26 @@
 <!DOCTYPE html>
 <html lang="ru">
-@@include('components/_head.html')
+  @@include('components/_head.html')
 
-<body>
-  @@include('components/_header.html')
-  <main class="page-content">
-    @@include('components/_mainpage-news.html')
-    @@include('components/_mainpage-partners.html')
-  </main>
-  @@include('components/_contact-form.html')
-  <div class="modal">
-    <button class="modal__close">
-      Закрыть окно
-    </button>
-    <div class="modal__overlay"></div>
-    <div class="modal__box">
-      @@include('components/_modal-account.html')
-      @@include('components/_modal-reg.html')
-      @@include('components/_modal-settings.html')
-      @@include('components/_modal-error.html')
+  <body>
+    @@include('components/_header.html')
+    <main class="page-content">
+      @@include('components/_mainpage-news.html')
+      @@include('components/_mainpage-partners.html')
+    </main>
+    @@include('components/_contact-form.html')
+    <div class="modal">
+      <button class="modal__close">Закрыть окно</button>
+      <div class="modal__overlay"></div>
+      <div class="modal__box">
+        @@include('components/_modal-account.html')
+        @@include('components/_modal-sign-in.html')
+        @@include('components/_modal-sign-up.html')
+        @@include('components/_modal-reg.html')
+        @@include('components/_modal-settings.html')
+        @@include('components/_modal-error.html')
+      </div>
     </div>
-  </div>
-  @@include('components/_footer.html')
-  @@include('components/_scripts.html')
-</body>
-
+    @@include('components/_footer.html') @@include('components/_scripts.html')
+  </body>
 </html>

@@ -1,70 +1,79 @@
 <!DOCTYPE html>
 <html lang="ru">
-@@include('components/_head.html')
+  @@include('components/_head.html')
 
-<body>
-  @@include('components/_header.html')
-  <main class="page-content new-article page-content--bg">
-    <div class="container">
-      <h2 class="new-article__title section-title">
-        Форум
-        <span class="section-title__shadow">
+  <body>
+    @@include('components/_header.html')
+    <main class="page-content new-article page-content--bg">
+      <div class="container">
+        <h2 class="new-article__title section-title">
           Форум
-        </span>
-      </h2>
-      <h3 class="new-article__subtitle">Добавить статью</h3>
-      <form class="new-article__inner section--bg flex"
-        action>
-        <label class="new-article__input-wrapper new-article__input-wrapper--image"
-          for="new-article-pic">
-          <input class="new-article__pic"
-            id="new-article-pic"
-            name="New article picture"
-            type="file"
-            accept="image/*"
-            required>
-          <img src=""
-            alt="Загруженное изображение"
-            class="new-article__image">
-          <span class="new-article__descr">загрузить обложку статьи</span>
-        </label>
-        <label class="new-article__input-wrapper new-article__input-wrapper--small"
-          for="new-article-name">
-          <input class="new-article__name new-article__input-text"
-            id="new-article-name"
-            name="New article name"
-            placeholder="Заголовок статьи"
-            type="text"
-            required>
-        </label>
-        <label class="new-article__input-wrapper"
-          for="new-article-text">
-          <textarea name="New article text"
-            id="new-article-text"
-            class="new-article__content new-article__input-text"
-            required></textarea>
-        </label>
-        <button type="submit"
-          class="new-article__btn blue-btn">Опубликовать</button>
-      </form>
+          <span class="section-title__shadow"> Форум </span>
+        </h2>
+        <h3 class="new-article__subtitle">Добавить статью</h3>
+        <form class="new-article__inner section--bg flex" action>
+          <label
+            class="new-article__input-wrapper new-article__input-wrapper--image"
+            for="new-article-pic"
+          >
+            <input
+              class="new-article__pic"
+              id="new-article-pic"
+              name="New article picture"
+              type="file"
+              accept="image/*"
+              required
+            />
+            <img
+              src=""
+              alt="Загруженное изображение"
+              class="new-article__image"
+            />
+            <span class="new-article__descr">загрузить обложку статьи</span>
+          </label>
+          <label
+            class="new-article__input-wrapper new-article__input-wrapper--small"
+            for="new-article-name"
+          >
+            <input
+              class="new-article__name new-article__input-text"
+              id="new-article-name"
+              name="New article name"
+              placeholder="Заголовок статьи"
+              type="text"
+              required
+            />
+          </label>
+          <label class="new-article__input-wrapper" for="new-article-text">
+            <textarea
+              name="New article text"
+              id="new-article-text"
+              class="new-article__content new-article__input-text"
+              required
+            ></textarea>
+          </label>
+          <button type="submit" class="new-article__btn blue-btn">
+            Опубликовать
+          </button>
+        </form>
+      </div>
+      <div
+        class="new-article__divider new-article__divider--divider-left"
+      ></div>
+    </main>
+    @@include('components/_contact-form.html')
+    <div class="modal">
+      <button class="modal__close">Закрыть окно</button>
+      <div class="modal__overlay"></div>
+      <div class="modal__box">
+        @@include('components/_modal-account.html')
+        @@include('components/_modal-sign-in.html')
+        @@include('components/_modal-sign-up.html')
+        @@include('components/_modal-reg.html')
+        @@include('components/_modal-settings.html')
+        @@include('components/_modal-error.html')
+      </div>
     </div>
-    <div class="new-article__divider new-article__divider--divider-left"></div>
-  </main>
-  @@include('components/_contact-form.html')
-  <div class="modal">
-    <button class="modal__close">
-      Закрыть окно
-    </button>
-    <div class="modal__overlay"></div>
-    <div class="modal__box">
-      @@include('components/_modal-account.html')
-      @@include('components/_modal-reg.html')
-      @@include('components/_modal-settings.html')
-      @@include('components/_modal-error.html')
-    </div>
-  </div>
-  @@include('components/_footer.html')
-  @@include('components/_scripts.html')
-</body>
-
+    @@include('components/_footer.html') @@include('components/_scripts.html')
+  </body>
 </html>

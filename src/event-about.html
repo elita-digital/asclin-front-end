@@ -1,69 +1,83 @@
 <!DOCTYPE html>
 <html lang="ru">
-@@include('components/_head.html')
+  @@include('components/_head.html')
 
-<body>
-  @@include('components/_header.html')
-  <main class="page-content">
-    <section class='event-about'>
-      <div class='container'>
-        <h2 class="event-about__title section-title">
-          о конференции
-          <span class="section-title__shadow">
+  <body>
+    @@include('components/_header.html')
+    <main class="page-content">
+      <section class="event-about">
+        <div class="container">
+          <h2 class="event-about__title section-title">
             о конференции
-          </span>
-        </h2>
-        <div class='event-about__inner'>
-          <article class="event-about__descr content-item content-item--bg-right flex">
-            <img class="content-item__picture"
-              src="images/img-1.jpg"
-              alt="Фото конференции">
-            <div class="content-item__content">
-              <h3 class="content-item__title">Резюме конференции</h3>
-              <p class="content-item__text">Далеко-далеко за словесными, горами в стране гласных и согласных живут
-                рыбные тексты. Рукописи первую, родного составитель которое залетают там сбить переулка приставка.
-                Пустился коварных журчит бросил языком рекламных назад текст предложения. Назад города то предупредила
-                сих семь буквоград, раз его алфавит рекламных диких сбить что над, всеми заглавных коварный ты продолжил
-                снова?</p>
-              <p class="content-item__text">Далеко-далеко за словесными горами в стране гласных и согласных живут рыбные
-                тексты. Всеми, знаках. Заманивший они своих жаренные ручеек имеет знаках залетают.</p>
-            </div>
-          </article>
+            <span class="section-title__shadow"> о конференции </span>
+          </h2>
+          <div class="event-about__inner">
+            <article
+              class="event-about__descr content-item content-item--bg-right flex"
+            >
+              <img
+                class="content-item__picture"
+                src="images/img-1.jpg"
+                alt="Фото конференции"
+              />
+              <div class="content-item__content">
+                <h3 class="content-item__title">Резюме конференции</h3>
+                <p class="content-item__text">
+                  Далеко-далеко за словесными, горами в стране гласных и
+                  согласных живут рыбные тексты. Рукописи первую, родного
+                  составитель которое залетают там сбить переулка приставка.
+                  Пустился коварных журчит бросил языком рекламных назад текст
+                  предложения. Назад города то предупредила сих семь буквоград,
+                  раз его алфавит рекламных диких сбить что над, всеми заглавных
+                  коварный ты продолжил снова?
+                </p>
+                <p class="content-item__text">
+                  Далеко-далеко за словесными горами в стране гласных и
+                  согласных живут рыбные тексты. Всеми, знаках. Заманивший они
+                  своих жаренные ручеек имеет знаках залетают.
+                </p>
+              </div>
+            </article>
+          </div>
         </div>
-      </div>
-    </section>
+      </section>
 
-    <section class='event-result'>
-      <div class='container'>
-        <h2 class="event-result__title section-title">
-          Результаты
-          <span class="section-title__shadow">
+      <section class="event-result">
+        <div class="container">
+          <h2 class="event-result__title section-title">
             Результаты
-          </span>
-        </h2>
-        <div class='event-result__inner flex'>
-          <span class="event-result__content-item event-result__content-item--cities counter-item">45</span>
-          <span class="event-result__content-item event-result__content-item--people counter-item">233</span>
-          <span class="event-result__content-item event-result__content-item--reports counter-item">300</span>
+            <span class="section-title__shadow"> Результаты </span>
+          </h2>
+          <div class="event-result__inner flex">
+            <span
+              class="event-result__content-item event-result__content-item--cities counter-item"
+              >45</span
+            >
+            <span
+              class="event-result__content-item event-result__content-item--people counter-item"
+              >233</span
+            >
+            <span
+              class="event-result__content-item event-result__content-item--reports counter-item"
+              >300</span
+            >
+          </div>
         </div>
+      </section>
+    </main>
+    @@include('components/_contact-form.html')
+    <div class="modal">
+      <button class="modal__close">Закрыть окно</button>
+      <div class="modal__overlay"></div>
+      <div class="modal__box">
+        @@include('components/_modal-account.html')
+        @@include('components/_modal-sign-in.html')
+        @@include('components/_modal-sign-up.html')
+        @@include('components/_modal-reg.html')
+        @@include('components/_modal-settings.html')
+        @@include('components/_modal-error.html')
       </div>
-    </section>
-  </main>
-  @@include('components/_contact-form.html')
-  <div class="modal">
-    <button class="modal__close">
-      Закрыть окно
-    </button>
-    <div class="modal__overlay"></div>
-    <div class="modal__box">
-      @@include('components/_modal-account.html')
-      @@include('components/_modal-reg.html')
-      @@include('components/_modal-settings.html')
-      @@include('components/_modal-error.html')
     </div>
-  </div>
-  @@include('components/_footer.html')
-  @@include('components/_scripts.html')
-</body>
-
+    @@include('components/_footer.html') @@include('components/_scripts.html')
+  </body>
 </html>
