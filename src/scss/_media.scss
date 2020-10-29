@@ -125,8 +125,6 @@
   }
 
   .vertical-item {
-    flex: 0 0 45%;
-
     margin: 30px auto 0;
   }
 
@@ -525,10 +523,6 @@
     line-height: 1.7;
   }
 
-  .vertical-item {
-    flex: 0 0 100%;
-  }
-
   .past-events__title {
     font-size: 40px;
   }
@@ -643,6 +637,15 @@
 
   .about__item::after {
     top: -30px;
+  }
+
+  .spec .swiper-container,
+  .past-events .swiper-container {
+    overflow: hidden;
+  }
+
+  .vertical-item:hover {
+    transform: none;
   }
 }
 
@@ -847,10 +850,6 @@
 
   .event-result {
     margin-top: 98px;
-  }
-
-  .past-events__item {
-    max-width: calc(100% - 40px);
   }
 
   .horizontal-item__icons {

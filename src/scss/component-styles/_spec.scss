@@ -1,23 +1,29 @@
 .spec {
-	margin-bottom: 60px;
+  margin-bottom: 60px;
 
-	&__content {
-		margin-top: 100px;
+  &__content {
+    margin-top: 100px;
 
-		&::before {
-			top: 5%;
-			height: 100%;
-			left: -5%;
-			width: 100vw;
-		}
-	}
+    &::before {
+      top: 5%;
+      left: -5%;
 
-	&__divider {
-		margin-top: 120px;
+      width: 100vw;
+      height: 100%;
+    }
+  }
 
-		&::after {
-			top: 50%;
-			transform: translateY(-50%) rotate(180deg);
-		}
-	}
+  &__divider {
+    margin-top: 120px;
+
+    &::after {
+      top: 50%;
+
+      transform: translateY(-50%) rotate(180deg);
+    }
+  }
+
+  .swiper-container {
+    overflow: visible;
+  }
 }

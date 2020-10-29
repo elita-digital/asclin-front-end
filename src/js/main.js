@@ -1,36 +1,9 @@
 $(function () {
   //ANCHOR: определяем Internet Explorer и задаём свои стили
-  $(window).on("load", function () {
-    let userAgent = window.navigator.userAgent;
-    let is_ie = /trident/gi.test(userAgent) || /msie/gi.test(userAgent);
+  let userAgent = window.navigator.userAgent;
+  let is_ie = /trident/gi.test(userAgent) || /msie/gi.test(userAgent);
 
-    console.log("is_ie :>> ", is_ie);
-
-    if (is_ie != false) {
-      $("body").addClass("ie-active");
-    } else {
-      //ANCHOR: инициалитзация слайдера
-      // new Swiper(".swiper-container", {
-      //   loop: true,
-      //   pagination: false,
-      //   navigation: false,
-      //   scrollbar: false,
-      //   slidesPerView: 1,
-      //   breakpoints: {
-      //     565: {
-      //       slidesPerView: 2,
-      //     },
-      //     768: {
-      //       slidesPerView: 3,
-      //     },
-      //     1024: {
-      //       slidesPerView: 4,
-      //     },
-      //   },
-      // });
-      //!ANCHOR
-    }
-  });
+  if (is_ie) $("body").addClass("ie-active");
   //!ANCHOR
 
   // ANCHOR: функция для открытия модального окна
@@ -51,9 +24,6 @@ $(function () {
     $("body").removeClass("no-scroll");
     $(".modal").fadeOut(260);
     $(".modal .modal__content-wrapper").fadeOut(300);
-    setTimeout(() => {
-      $("#modal-error").show();
-    }, 350);
     $("body *:not(.modal *)").removeAttr("tabindex");
   });
   // !ANCHOR
@@ -88,7 +58,7 @@ $(function () {
   // !ANCHOR
 
   //ANCHOR: функция показа фото при смене в настройках
-  $("#settings-user-photo").change(function () {
+  $(".settings-user-photo").change(function () {
     if (this.files && this.files[0]) {
       var reader = new FileReader();
       reader.onload = function (e) {
@@ -98,7 +68,7 @@ $(function () {
     }
   });
 
-  $("#new-article-pic").change(function () {
+  $(".new-article-pic").change(function () {
     if (this.files && this.files[0]) {
       var reader = new FileReader();
       reader.onload = function (e) {
@@ -227,7 +197,7 @@ $(function () {
   // !ANCHOR
 
   // ANCHOR: маски форм
-  $("#registration-username, #settings-username").inputmask({
+  $(".registration-username, .settings-username").inputmask({
     mask: "*{3,30} *{3,30} *{3,30}",
     greedy: true,
     validator: "[0-9A-Za-z!]",
@@ -246,7 +216,7 @@ $(function () {
     validator: "[0-9]",
   });
 
-  $("#contact-form-email, #settings-email, #registration-email").inputmask({
+  $(".contact-form-email, .settings-email, .registration-email").inputmask({
     alias: "email",
     definitions: {
       "*": {
@@ -257,7 +227,7 @@ $(function () {
     },
   });
 
-  $("#settings-insta").inputmask({
+  $(".settings-insta").inputmask({
     mask: "https://inst\\agr\\am.com/*{1,30}",
     greedy: false,
     definitions: {
@@ -269,7 +239,7 @@ $(function () {
     },
   });
 
-  $("#settings-fb").inputmask({
+  $(".settings-fb").inputmask({
     mask: "https://f\\acebook.com/*{1,30}",
     greedy: false,
     definitions: {
@@ -311,16 +281,60 @@ $(function () {
   //ANCHOR: замена заполняющего текста для инпута при разрешении экрана меньше 699px
   $(window).on("load resize orientationchange", function () {
     if (window.matchMedia("(max-width: 699px)").matches) {
-      $("#registration-add-spec, #settings-add-spec").attr(
+      $(".registration-add-spec, .settings-add-spec").attr(
         "placeholder",
         "Доп. специальность"
       );
     } else {
-      $("#registration-add-spec, #settings-add-spec").attr(
+      $(".registration-add-spec, .settings-add-spec").attr(
         "placeholder",
         "Дополнительная специальность"
       );
     }
+  });
+  //!ANCHOR
+
+  //ANCHOR: инициалитзация слайдеров
+  new Swiper(".partners swiper-container", {
+    loop: false,
+    pagination: false,
+    navigation: false,
+    scrollbar: false,
+    slidesPerView: 1,
+    breakpoints: {
+      565: {
+        slidesPerView: 2,
+      },
+      768: {
+        slidesPerView: 3,
+      },
+      1024: {
+        slidesPerView: 4,
+      },
+    },
+  });
+
+  new Swiper(".spec .swiper-container, .past-events .swiper-container", {
+    loop: false,
+    pagination: {
+      el: ".swiper-pagination",
+      type: "bullets",
+      clickable: true,
+    },
+    navigation: false,
+    scrollbar: false,
+    slidesPerView: 1,
+    spaceBetween: 20,
+    breakpoints: {
+      768: {
+        slidesPerView: 2,
+        spaceBetween: 40,
+      },
+      1024: {
+        slidesPerView: 3,
+        spaceBetween: 70,
+      },
+    },
   });
   //!ANCHOR
 });

@@ -4,6 +4,18 @@
 >
   <p class="modal__title">Регистрация</p>
   <form class="modal__registration registration" action>
+    <div class="modal__error">
+      <h4>Ошибка!</h4>
+      <p>Пользователь с данным e-mail уже зарегистрирован.</p>
+      <p>
+        Хотите
+        <u
+          ><a href="#" class="js-modal-call" data-modal="#modal-sign-in"
+            >войти</a
+          ></u
+        >?
+      </p>
+    </div>
     <div class="registration__input-row flex">
       <label class="registration__input-wrapper" for="registration-username">
         <input
