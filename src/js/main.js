@@ -31,12 +31,7 @@ $(function () {
   // ANCHOR: функция аккордеона
   $(".js-info-open").on("click focus", function () {
     $(this).toggleClass("info-box__title--open");
-    // $(this).parent().siblings().find(".info-box__content").slideUp(260);
-    // $(this)
-    //   .parent()
-    //   .siblings()
-    //   .find(".info-box__title")
-    //   .removeClass("info-box__title--open");
+
     $(this).siblings(".info-box__content").slideToggle(260);
 
     if ($(this).parent().hasClass("modal__info-box")) {
@@ -124,75 +119,73 @@ $(function () {
     hintCount++;
     sessionStorage.setItem("hintCount", hintCount);
   });
-
   //!ANCHOR
 
   // ANCHOR: функция вызова плагина для выбора одинарной даты
+  if (window.innerWidth >= 1024) {
+    $("#registration-borth-date, #settings-borth-date").datepicker({
+      maxDate: new Date(),
+      dateFormat: "dd.mm.yyyy", //NOTE: можно включить полное отображение даты: 29 февраля 2020, задав значение dd MM yyyy но оно не всегда помещается в поле ввода целиком.
+      position: "top left",
+      view: "years",
+      range: false,
+      clearButton: true,
+      todayButton: new Date(),
+      autoClose: true,
+      language: {
+        months: [
+          "января",
+          "февраля",
+          "марта",
+          "апреля",
+          "мая",
+          "июня",
+          "июля",
+          "августа",
+          "сентября",
+          "октября",
+          "ноября",
+          "декабря",
+        ],
+      },
+    });
+  }
 
-  // $("[type='date']").datepicker({
-  //   maxDate: new Date(),
-  //   dateFormat: "dd.mm.yyyy", //NOTE: можно включить полное отображение даты: 29 февраля 2020, задав значение dd MM yyyy но оно не всегда помещается в поле ввода целиком.
-  //   position: "top left",
-  //   view: "years",
-  //   range: false,
-  //   clearButton: true,
-  //   todayButton: new Date(),
-  //   autoClose: true,
-  //   language: {
-  //     months: [
-  //       "января",
-  //       "февраля",
-  //       "марта",
-  //       "апреля",
-  //       "мая",
-  //       "июня",
-  //       "июля",
-  //       "августа",
-  //       "сентября",
-  //       "октября",
-  //       "ноября",
-  //       "декабря",
-  //     ],
-  //   },
-  // });
-
-  // $(window).on("load", function () {
-  //   if (window.matchMedia("(max-width: 1023px)").matches) {
-  //     $("[type='date']").datepicker().data("datepicker").destroy();
-  //   }
-  // });
-
+  $("#registration-borth-date, #settings-borth-date").inputmask({
+    mask: "99.99.9999",
+    // greedy: true,
+    validator: "[0-9]",
+  });
   // !ANCHOR
 
   // ANCHOR: функция вызова плагина для выбора двойной даты
-
-  // $("#settings-work-date").datepicker({
-  //   maxDate: new Date(),
-  //   dateFormat: "dd.mm.yyyy", //NOTE: можно включить полное отображение даты: 29 февраля 2020, задав значение dd MM yyyy но оно не всегда помещается в поле ввода целиком.
-  //   position: "top left",
-  //   view: "years",
-  //   range: true,
-  //   clearButton: true,
-  //   todayButton: new Date(),
-  //   multipleDatesSeparator: " - ",
-  //   autoClose: true,
-  //   language: {
-  //     months: [
-  //       "января",
-  //       "февраля",
-  //       "марта",
-  //       "апреля",
-  //       "мая",
-  //       "июня",
-  //       "июля",
-  //       "августа",
-  //       "сентября",
-  //       "октября",
-  //       "ноября",
-  //       "декабря",
-  //     ],
-  //   },
-  // });
+  $("#settings-work-date").datepicker({
+    maxDate: new Date(),
+    dateFormat: "dd.mm.yyyy", //NOTE: можно включить полное отображение даты: 29 февраля 2020, задав значение dd MM yyyy но оно не всегда помещается в поле ввода целиком.
+    position: "top left",
+    view: "years",
+    range: true,
+    clearButton: true,
+    todayButton: new Date(),
+    multipleDatesSeparator: " - ",
+    autoClose: true,
+    language: {
+      months: [
+        "января",
+        "февраля",
+        "марта",
+        "апреля",
+        "мая",
+        "июня",
+        "июля",
+        "августа",
+        "сентября",
+        "октября",
+        "ноября",
+        "декабря",
+      ],
+    },
+  });
 
   // !ANCHOR
 
@@ -336,5 +329,48 @@ $(function () {
       },
     },
   });
+  //!ANCHOR
+
+  //ANCHOR: form validation before submit
+  $("#modal-settings form, #modal-reg form").submit(function (e) {
+    let errors = [];
+    let $errorContainer;
+
+    if ($(this).parent("#modal-settings")) {
+      $errorContainer = $(this).find(".settings__top-box");
+    } else $errorContainer = $(this);
+
+    $errorContainer.find(".modal__error").remove();
+    $errorContainer.find(".modal__success").remove();
+
+    if ($(this).find(".js-password").length > 0) {
+      let password = String($(this).find(".js-password").val()).trim();
+      let passwordConfirm = String(
+        $(this).find(".js-password-confirm").val()
+      ).trim();
+
+      if (password && password.length < 6)
+        errors.push("Пароль должен быть не менее 6 символов длиной.");
+      if (password && password !== passwordConfirm)
+        errors.push("Неверное подтверждение пароля.");
+    }
+
+    if (errors.length > 0) {
+      e.preventDefault();
+      $errorContainer.prepend(generateError(errors));
+    }
+  });
+
+  function generateError(errors = []) {
+    let error = '<div class="modal__error"><p>';
+
+    errors.forEach(function (e) {
+      error += e + "<br>";
+    });
+
+    error += "</p></div>";
+
+    return error;
+  }
   //!ANCHOR
 });

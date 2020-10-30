@@ -192,4 +192,22 @@
       margin: 5px 0 0;
     }
   }
+
+  &__success {
+    color: #27ae60;
+
+    @extend .modal__error;
+  }
+
+  &__page-wrapper {
+    margin: 200px 0 50px;
+
+    .modal__content-wrapper {
+      display: block;
+
+      &:before {
+        content: none;
+      }
+    }
+  }
 }

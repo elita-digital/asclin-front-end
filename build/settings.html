@@ -151,147 +151,319 @@
 </header>
 <!-- !SECTION - header -->
 
-
-    <main class="page-content recomendations">
+    <main class="page-content">
       <div class="container">
-        <h2 class="recomendations__title section-title">
-          рекомендации <br />АСКЛИН
-          <span class="section-title__shadow">рекомендации <br />АСКЛИН</span>
-        </h2>
-        <article
-          class="recomendations__descr content-item content-item--bg-right flex"
-        >
-          <img
-            class="content-item__picture"
-            src="images/img-1.jpg"
-            alt="Фото конференции"
-          />
-          <div class="content-item__content content-item__content--no-title">
-            <p class="content-item__text">
-              Раздел находится в стадии разработки и наполнения. Приглашаем всех
-              заинтересованных специалистов к коллективному созданию
-              рекомендаций и алгоритмов проведения методов, используемых в
-              клинической нейрофизиологии. Для того чтобы принять участие в
-              обсуждении, следует подать заявку о вступлении в АСКЛИН, после
-              этого подайте запрос для регистрации на форуме и в группу на
-              Фейсбук, в которой будет происходить обсуждение.
-            </p>
-            <p class="content-item__text">
-              Одной из целей АСКЛИН является создание рекомендаций для
-              проведения и анализа нейрофизиологических исследований. Все
-              рекомендации основаны на принципах доказательной медицины, и
-              представляют собой общее мнение российских экспертов с учетом
-              отечественного и мирового опыта.
-            </p>
-          </div>
-        </article>
+        <div class="modal__page-wrapper">
+          <div class="modal__content-wrapper" id="modal-settings">
+            <p class="modal__title">Редактировать профиль</p>
 
-        <div class="recomendations__grid recomendations__grid--divider-left">
-          <a
-            class="recomendations__link recomendations__link--left flex"
-            href="#"
-            download="ЭЭГ"
-          >
-            <span class="recomendations__link-title">ЭЭГ</span>
-            <span class="recomendations__link-subtext">скачать</span>
-          </a>
-          <a
-            class="recomendations__link recomendations__link--center flex"
-            href="#"
-            download="ЭМГ"
-          >
-            <span class="recomendations__link-title">ЭМГ</span>
-            <span class="recomendations__link-subtext">скачать</span>
-          </a>
-          <a
-            class="recomendations__link recomendations__link--right flex"
-            href="#"
-            download="ИОНМ"
-          >
-            <span class="recomendations__link-title">ИОНМ</span>
-            <span class="recomendations__link-subtext">скачать</span>
-          </a>
-          <a
-            class="recomendations__link recomendations__link--small-text recomendations__link--center flex"
-            href="#"
-            download="Вызванные           потенциалы"
-          >
-            <span class="recomendations__link-title">Магнитная стимуляция</span>
-            <span class="recomendations__link-subtext">скачать</span>
-          </a>
-          <a
-            class="recomendations__link recomendations__link--small-text recomendations__link--right flex"
-            href="#"
-            download="Магнитная           стимуляция"
-          >
-            <span class="recomendations__link-title">Вызванные потенциалы</span>
-            <span class="recomendations__link-subtext">скачать</span>
-          </a>
+            <form
+              method="post"
+              name="form1"
+              action="/personal/profile.php"
+              enctype="multipart/form-data"
+              class="modal__settings settings"
+            >
+              <div class="settings__top-row flex">
+                <label
+                  class="settings__input-wrapper settings__input-wrapper--picture flex"
+                  for="settings-user-photo"
+                >
+                  <input
+                    class="settings__user-photo"
+                    id="settings-user-photo"
+                    name="PERSONAL_PHOTO"
+                    type="file"
+                    accept="image/*"
+                  />
+                  <img
+                    class="settings__uploaded-photo"
+                    src="https://asclin.isi.ru/local/media//images/icons/nopicture.svg"
+                    alt="Загруженное изображение"
+                  />
+                  <span class="settings__picture-descr"> сменить фото </span>
+                </label>
+
+                <div class="settings__top-box">
+                  <div class="modal__error">
+                    <h4>Что-то пошло не так.</h4>
+                    <p>Обновите страницу и попробуйте снова.</p>
+                  </div>
+                  <div class="modal__success">
+                    <p>Изменения сохранены.</p>
+                  </div>
+                  <label class="settings__input-wrapper">
+                    <input
+                      size="30"
+                      type="text"
+                      name="LAST_NAME"
+                      value="Иванов"
+                      class="settings__input-text"
+                      id="settings-REGISTER[LAST_NAME]"
+                      placeholder="Фамилия: *"
+                      required=""
+                    />
+                  </label>
+                  <label class="settings__input-wrapper">
+                    <input
+                      size="30"
+                      type="text"
+                      name="NAME"
+                      value="Иван"
+                      class="settings__input-text"
+                      id="settings-REGISTER[NAME]"
+                      placeholder="Имя: *"
+                      required=""
+                    />
+                  </label>
+
+                  <label class="settings__input-wrapper">
+                    <input
+                      size="30"
+                      type="text"
+                      name="SECOND_NAME"
+                      value="Иванович"
+                      class="settings__input-text"
+                      id="settings-REGISTER[SECOND_NAME]"
+                      placeholder="Отчество: "
+                    />
+                  </label>
+
+                  <label class="settings__input-wrapper">
+                    <input
+                      size="30"
+                      type="text"
+                      name="PERSONAL_MOBILE"
+                      value="888888888888888888"
+                      class="settings__input-text"
+                      id="settings-tel"
+                      placeholder="телефон"
+                      required=""
+                    />
+                  </label>
+
+                  <label class="settings__input-wrapper">
+                    <input
+                      size="30"
+                      type="password"
+                      name="NEW_PASSWORD"
+                      value=""
+                      class="settings__input-text js-password"
+                      placeholder="новый пароль"
+                      autocomplete="off"
+                    />
+                  </label>
+                  <label class="settings__input-wrapper">
+                    <input
+                      size="30"
+                      type="password"
+                      name="NEW_PASSWORD_CONFIRM"
+                      value=""
+                      class="settings__input-text js-password-confirm"
+                      placeholder="подтвердите новый пароль"
+                      autocomplete="off"
+                    />
+                  </label>
+                </div>
+              </div>
+
+              <div class="settings__input-row flex">
+                <label
+                  class="settings__input-wrapper settings__input-wrapper--3 settings__input-wrapper--fake-ph"
+                  for="settings-borth-date"
+                >
+                  <input
+                    class="settings__input-text"
+                    id="settings-borth-date"
+                    name="PERSONAL_BIRTHDAY"
+                    value="28.10.2020"
+                    inputmode="numeric"
+                    required=""
+                  />
+                  <span class="settings__fake-ph">Дата рождения</span>
+                </label>
+                <label
+                  class="settings__input-wrapper settings__input-wrapper--3"
+                  for="settings-city"
+                >
+                  <input
+                    class="settings__input-text"
+                    id="settings-city"
+                    name="WORK_CITY"
+                    value="Москва"
+                    type="text"
+                    placeholder="Город"
+                    required=""
+                  />
+                </label>
+                <label
+                  class="settings__input-wrapper settings__input-wrapper--3"
+                  for="settings-email"
+                >
+                  <input
+                    class="settings__input-text"
+                    id="settings-email"
+                    name="EMAIL"
+                    value="11111@vsdfgsd.com"
+                    type="text"
+                    placeholder="e-mail"
+                    inputmode="email"
+                    required=""
+                  />
+                </label>
+              </div>
+
+              <div class="settings__workplaces-wrapper">
+                <div class="settings__workplace">
+                  <div class="settings__input-row flex">
+                    <label
+                      class="settings__input-wrapper settings__input-wrapper--2"
+                      for="settings-main-spec"
+                    >
+                      <input
+                        class="settings__input-text"
+                        id="settings-main-spec"
+                        name="UF_MAIN_SPEC"
+                        value="Врач основной спецтиальности"
+                        type="text"
+                        placeholder="Основная специальность"
+                        required=""
+                      />
+                    </label>
+                    <label
+                      class="settings__input-wrapper settings__input-wrapper--2 settings__input-wrapper--sub-ph"
+                      for="settings-add-spec"
+                    >
+                      <input
+                        class="settings__input-text"
+                        id="settings-add-spec"
+                        name="UF_ADD_SPEC"
+                        value="Врач дополнительной специальности"
+                        type="text"
+                        placeholder="Дополнительная специальность"
+                      />
+                      <span class="settings__sub-ph">*при наличии</span>
+                    </label>
+                  </div>
+
+                  <div class="settings__input-row flex">
+                    <label
+                      class="settings__input-wrapper settings__input-wrapper--3"
+                      for="settings-workplace"
+                    >
+                      <input
+                        class="settings__input-text"
+                        id="settings-workplace"
+                        name="WORK_COMPANY"
+                        value="НИИ ИИ"
+                        type="text"
+                        placeholder="Место работы"
+                        required=""
+                      />
+                    </label>
+
+                    <label
+                      class="settings__input-wrapper settings__input-wrapper--3"
+                      for="settings-work-pos"
+                    >
+                      <input
+                        class="settings__input-text"
+                        id="settings-work-pos"
+                        name="WORK_POSITION"
+                        value="Директор"
+                        type="text"
+                        placeholder="Должность"
+                        required=""
+                      />
+                    </label>
+
+                    <label
+                      class="settings__input-wrapper settings__input-wrapper--3"
+                      for="settings-work-date"
+                    >
+                      <input
+                        class="settings__input-text"
+                        id="settings-work-date"
+                        name="UF_WORK_START_DATE"
+                        value="10.10.2020"
+                        placeholder="Даты"
+                        required=""
+                      />
+                    </label>
+                  </div>
+                </div>
+              </div>
+
+              <div class="settings__input-row flex">
+                <label
+                  class="settings__input-wrapper settings__input-wrapper--2 settings__input-wrapper--sub-ph"
+                  for="settings-insta"
+                >
+                  <input
+                    class="settings__input-text"
+                    id="settings-insta"
+                    name="UF_INSTAGRAM"
+                    value="https://www.instagram.com/fgdsgfdsgdfsg"
+                    type="url"
+                    inputmode="url"
+                    placeholder="Страница Instagram"
+                  />
+                  <span class="settings__sub-ph">*при наличии</span>
+                </label>
+                <label
+                  class="settings__input-wrapper settings__input-wrapper--2 settings__input-wrapper--sub-ph"
+                  for="settings-fb"
+                >
+                  <input
+                    class="settings__input-text"
+                    id="settings-fb"
+                    name="UF_FACEBOOK"
+                    value="https://www.facebook.com/gffgsdgsdf"
+                    type="url"
+                    inputmode="url"
+                    placeholder="Страница Facebook"
+                  />
+                  <span class="settings__sub-ph">*при наличии</span>
+                </label>
+              </div>
+
+              <div class="settings__input-row flex">
+                <label class="settings__input-wrapper" for="settings-interests">
+                  <textarea
+                    class="settings__comment-field settings__input-text"
+                    id="settings-interests"
+                    name="UF_PREVIEW"
+                    placeholder="Научные интересы"
+                    required=""
+                  >
+Текст для списка. Заполняется только через админку. Текст для списка. Заполняется только через админку. Текст для списка. Заполняется только через админку. Текст для списка. Заполняется только через админку. Текст для списка. Заполняется только через админку. Текст для списка. Заполняется только через админку. Текст для списка. Заполняется только через админку.</textarea
+                  >
+                </label>
+              </div>
+
+              <div class="settings__input-row flex">
+                <label class="settings__input-wrapper" for="settings-comment">
+                  <textarea
+                    class="settings__comment-field settings__input-text"
+                    id="settings-comment"
+                    name="UF_INFO"
+                    placeholder="О себе"
+                  >
+Подолнительные сведения О СЕБЕ заполняются в редактировании пропфиля и в админке. Подолнительные сведения О СЕБЕ заполняются в редактировании пропфиля и в админке. Подолнительные сведения О СЕБЕ заполняются в редактировании пропфиля и в админке. Подолнительные сведения О СЕБЕ заполняются в редактировании пропфиля и в админке.</textarea
+                  >
+                </label>
+              </div>
+              <input
+                type="submit"
+                class="settings__btn blue-btn"
+                name="save"
+                value="отправить"
+              />
+            </form>
+          </div>
         </div>
       </div>
     </main>
-
-    <main class="page-content recomendations">
-      <div class="container">
-        <h2 class="recomendations__title section-title">
-          Рекомендации <br />международных <br />сообществ
-          <span class="section-title__shadow"
-            >Рекомендации <br />международных <br />сообществ</span
-          >
-        </h2>
-        <article
-          class="recomendations__descr content-item content-item--bg-right flex"
-        >
-          <img
-            class="content-item__picture"
-            src="images/img-1.jpg"
-            alt="Фото конференции"
-          />
-          <div class="content-item__content content-item__content--no-title">
-            <p class="content-item__text">
-              Раздел находится в стадии разработки и наполнения. Приглашаем всех
-              заинтересованных специалистов к коллективному созданию
-              рекомендаций и алгоритмов проведения методов, используемых в
-              клинической нейрофизиологии. Для того чтобы принять участие в
-              обсуждении, следует подать заявку о вступлении в АСКЛИН, после
-              этого подайте запрос для регистрации на форуме и в группу на
-              Фейсбук, в которой будет происходить обсуждение.
-            </p>
-            <p class="content-item__text">
-              Одной из целей АСКЛИН является создание рекомендаций для
-              проведения и анализа нейрофизиологических исследований. Все
-              рекомендации основаны на принципах доказательной медицины, и
-              представляют собой общее мнение российских экспертов с учетом
-              отечественного и мирового опыта.
-            </p>
-          </div>
-        </article>
-
-        <div class="recomendations__grid recomendations__grid--divider-left">
-          <a
-            class="recomendations__link recomendations__link--small-text recomendations__link--center flex"
-            href="#"
-            download="Вызванные           потенциалы"
-          >
-            <span class="recomendations__link-title"
-              >Методические материалы</span
-            >
-            <span class="recomendations__link-subtext">скачать</span>
-          </a>
-          <a
-            class="recomendations__link recomendations__link--small-text recomendations__link--right flex"
-            href="#"
-            download="Магнитная           стимуляция"
-          >
-            <span class="recomendations__link-title"
-              >Библиотека специалиста</span
-            >
-            <span class="recomendations__link-subtext">скачать</span>
-          </a>
-        </div>
-      </div>
-    </main>
-
     <section class="contact-form">
   <div class="container">
     <form class="contact-form__inner">

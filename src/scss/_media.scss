@@ -467,6 +467,10 @@
   .event-result {
     margin-top: 48px;
   }
+
+  .modal__page-wrapper {
+    margin-top: 40px;
+  }
 }
 
 //!MEDIA
@@ -876,6 +880,16 @@
   .horizontal-item__link:hover,
   .horizontal-item__link:focus {
     transform: none;
+  }
+
+  .modal__page-wrapper {
+    .modal__content-wrapper {
+      padding-bottom: 20px;
+
+      .settings__btn {
+        margin-bottom: 20px;
+      }
+    }
   }
 }
 
