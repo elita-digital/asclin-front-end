@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="ru">
+  @@include('components/_head.html')
+
+  <body>
+    @@include('components/_header.html')
+    <main class="page-content">
+      <div class="container">
+        <div class="modal__page-wrapper">
+          <div class="modal__content-wrapper">
+            <p class="modal__title">Восстановление пароля</p>
+
+            <form action="#" class="modal__settings settings">
+              <div class="registration__input-row flex">
+                <label
+                  class="registration__input-wrapper registration__input-wrapper--2"
+                >
+                  <input
+                    type="password"
+                    class="registration__input-text js-password"
+                    placeholder="Пароль *"
+                    required
+                  />
+                </label>
+                <label
+                  class="registration__input-wrapper registration__input-wrapper--2"
+                >
+                  <input
+                    type="password"
+                    class="registration__input-text js-password-confirm"
+                    placeholder="Подтверждение пароля *"
+                    required
+                  />
+                </label>
+              </div>
+
+              <button class="settings__btn blue-btn" type="submit">
+                сохранить
+              </button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </main>
+    @@include('components/_contact-form.html')
+    <div class="modal">
+      <button class="modal__close">Закрыть окно</button>
+      <div class="modal__overlay"></div>
+      <div class="modal__box">
+        @@include('components/_modal-account.html')
+        @@include('components/_modal-sign-in.html')
+        @@include('components/_modal-reset-password.html')
+        @@include('components/_modal-reg.html')
+        @@include('components/_modal-settings.html')
+      </div>
+    </div>
+    @@include('components/_footer.html') @@include('components/_scripts.html')
+  </body>
+</html>

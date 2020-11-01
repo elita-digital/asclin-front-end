@@ -123,7 +123,7 @@ $(function () {
 
   // ANCHOR: функция вызова плагина для выбора одинарной даты
   if (window.innerWidth >= 1024) {
-    $("#registration-borth-date, #settings-borth-date").datepicker({
+    $(".js-date, #registration-borth-date, #settings-borth-date").datepicker({
       maxDate: new Date(),
       dateFormat: "dd.mm.yyyy", //NOTE: можно включить полное отображение даты: 29 февраля 2020, задав значение dd MM yyyy но оно не всегда помещается в поле ввода целиком.
       position: "top left",
@@ -151,7 +151,7 @@ $(function () {
     });
   }
 
-  $("#registration-borth-date, #settings-borth-date").inputmask({
+  $(".js-date, #registration-borth-date, #settings-borth-date").inputmask({
     mask: "99.99.9999",
     // greedy: true,
     validator: "[0-9]",
@@ -331,46 +331,92 @@ $(function () {
   });
   //!ANCHOR
 
-  //ANCHOR: form validation before submit
-  $("#modal-settings form, #modal-reg form").submit(function (e) {
-    let errors = [];
-    let $errorContainer;
+  //ANCHOR: ajax forms submit
+  $(".ajax-form").submit(function (e) {
+    const errors = [];
 
-    if ($(this).parent("#modal-settings")) {
-      $errorContainer = $(this).find(".settings__top-box");
-    } else $errorContainer = $(this);
+    const $password = $(this).find(".js-password");
+    const $passwordConfirm = $(this).find(".js-password-confirm");
 
-    $errorContainer.find(".modal__error").remove();
-    $errorContainer.find(".modal__success").remove();
-
-    if ($(this).find(".js-password").length > 0) {
-      let password = String($(this).find(".js-password").val()).trim();
-      let passwordConfirm = String(
-        $(this).find(".js-password-confirm").val()
-      ).trim();
+    if ($password.length > 0) {
+      const password = String($password.val()).trim();
+      const passwordConfirm = String($passwordConfirm.val()).trim();
 
       if (password && password.length < 6)
         errors.push("Пароль должен быть не менее 6 символов длиной.");
-      if (password && password !== passwordConfirm)
+      else if (password && password !== passwordConfirm)
         errors.push("Неверное подтверждение пароля.");
     }
 
     if (errors.length > 0) {
       e.preventDefault();
-      $errorContainer.prepend(generateError(errors));
+      showMessage(this, errors, "error");
+    } else {
+      const action = $(this).attr("action");
+
+      $.ajax({
+        type: "POST",
+        url: action,
+        data: $(this).serialize(),
+        timeout: 3000,
+        error: () => {
+          showMessage(
+            this,
+            "Что-то пошло не так! Обновите страницу и попробуйте позже.",
+            "error"
+          );
+        },
+        success: (data) => {
+          if (data.url) {
+            window.location.href = data.url;
+          } else {
+            showMessage(
+              this,
+              data.message,
+              data.type === "ok" ? "success" : "error"
+            );
+          }
+        },
+      });
     }
   });
 
-  function generateError(errors = []) {
-    let error = '<div class="modal__error"><p>';
+  /**
+   * @param {HTMLElement} form
+   * @param {(string|string[]|undefined)} content
+   * @param {('success'|'error')} type
+   */
+  function showMessage(form, content, type = "success") {
+    let $container;
 
-    errors.forEach(function (e) {
-      error += e + "<br>";
-    });
+    if ($(form).parent("#modal-settings")) {
+      $container = $(form).find(".settings__top-box");
+    } else $container = $(form);
 
-    error += "</p></div>";
+    $container.find(".modal__error").remove();
+    $container.find(".modal__success").remove();
 
-    return error;
+    if (content && content.length > 0) {
+      $errorContainer.prepend(generateMessage(content, type));
+    }
+  }
+
+  /**
+   * @param {(string|string[])} content
+   * @param {('success'|'error')} type
+   */
+  function generateMessage(content, type = "success") {
+    let message = `<div class="modal__${type}"><p>`;
+
+    if (Array.isArray(content)) {
+      errors.forEach(function (e) {
+        message += e + "<br>";
+      });
+    } else {
+      message = content;
+    }
+
+    return message;
   }
   //!ANCHOR
 });

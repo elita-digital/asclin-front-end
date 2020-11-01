@@ -501,8 +501,15 @@
     <p>
       Еще не зарегистрированы?
       <u
-        ><a class="js-modal-call" data-modal="#modal-sign-up" href="#"
+        ><a class="js-modal-call" data-modal="#modal-reg" href="#"
           >Регистрация</a
+        ></u
+      >
+      <br />
+      Забыли пароль?
+      <u
+        ><a class="js-modal-call" data-modal="#modal-reset-password" href="#"
+          >Восстановить</a
         ></u
       >
     </p>
@@ -511,37 +518,12 @@
 
         <div
   class="modal__content-wrapper modal__content-wrapper--reg"
-  id="modal-sign-up"
+  id="modal-reset-password"
 >
-  <p class="modal__title">Регистрация</p>
+  <p class="modal__title">Восстановление пароля</p>
   <form class="modal__registration registration" action>
-    <div class="modal__error">
-      <h4>Ошибка!</h4>
-      <p>Пользователь с данным e-mail уже зарегистрирован.</p>
-      <p>
-        Хотите
-        <u
-          ><a href="#" class="js-modal-call" data-modal="#modal-sign-in"
-            >войти</a
-          ></u
-        >?
-      </p>
-    </div>
     <div class="registration__input-row flex">
-      <label class="registration__input-wrapper" for="registration-username">
-        <input
-          class="registration__input-text"
-          id="registration-username"
-          name="User Name"
-          type="text"
-          placeholder="Фамилия, Имя, Отчество"
-          required
-        />
-      </label>
-    </div>
-
-    <div class="registration__input-row flex">
-      <label class="registration__input-wrapper registration__input-wrapper--2">
+      <label class="registration__input-wrapper">
         <input
           class="registration__input-text"
           name="email"
@@ -550,47 +532,11 @@
           required
         />
       </label>
-      <label class="registration__input-wrapper registration__input-wrapper--2">
-        <input
-          class="registration__input-text"
-          name="password"
-          type="password"
-          placeholder="Пароль"
-          required
-        />
-      </label>
-    </div>
-
-    <div class="registration__input-row flex">
-      <label class="registration__checkbox" for="registration-checkbox">
-        <input
-          class="registration__checkbox-input"
-          id="registration-checkbox"
-          name="Registration checkbox"
-          type="checkbox"
-          required
-        />
-        <span class="registration__checkbox-descr">
-          я согласен на отправку персональных данных и принимаю
-          <a class="registration__checkbox-link" href="#"
-            >условия обработки и хранения информации</a
-          >
-        </span>
-      </label>
     </div>
 
     <button class="registration__btn blue-btn" type="submit">
-      Зарегистрироваться
+      Восстановить
     </button>
-
-    <p>
-      Уже зарегистрированы?
-      <u
-        ><a class="js-modal-call" data-modal="#modal-sign-in" href="#"
-          >Войти</a
-        ></u
-      >
-    </p>
   </form>
 </div>
 
@@ -629,6 +575,37 @@
       <h4>Что-то пошло не так.</h4>
       <p>Обновите страницу и попробуйте снова.</p>
     </div>
+
+    <div class="registration__input-row flex">
+      <label class="registration__input-wrapper">
+        <input
+          type="email"
+          class="registration__input-text"
+          placeholder="Email *"
+          required
+        />
+      </label>
+    </div>
+
+    <div class="registration__input-row flex">
+      <label class="registration__input-wrapper registration__input-wrapper--2">
+        <input
+          type="password"
+          class="registration__input-text js-password"
+          placeholder="Пароль *"
+          required
+        />
+      </label>
+      <label class="registration__input-wrapper registration__input-wrapper--2">
+        <input
+          type="password"
+          class="registration__input-text js-password-confirm"
+          placeholder="Подтверждение пароля *"
+          required
+        />
+      </label>
+    </div>
+
     <div class="registration__input-row flex">
       <label class="registration__input-wrapper" for="registration-username">
         <input

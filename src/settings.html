@@ -10,13 +10,7 @@
           <div class="modal__content-wrapper" id="modal-settings">
             <p class="modal__title">Редактировать профиль</p>
 
-            <form
-              method="post"
-              name="form1"
-              action="/personal/profile.php"
-              enctype="multipart/form-data"
-              class="modal__settings settings"
-            >
+            <form action="#" class="modal__settings settings">
               <div class="settings__top-row flex">
                 <label
                   class="settings__input-wrapper settings__input-wrapper--picture flex"
@@ -25,13 +19,13 @@
                   <input
                     class="settings__user-photo"
                     id="settings-user-photo"
-                    name="PERSONAL_PHOTO"
+                    name="User photo"
                     type="file"
                     accept="image/*"
                   />
                   <img
                     class="settings__uploaded-photo"
-                    src="https://asclin.isi.ru/local/media//images/icons/nopicture.svg"
+                    src="images/icons/nopicture.svg"
                     alt="Загруженное изображение"
                   />
                   <span class="settings__picture-descr"> сменить фото </span>
@@ -45,76 +39,28 @@
                   <div class="modal__success">
                     <p>Изменения сохранены.</p>
                   </div>
-                  <label class="settings__input-wrapper">
-                    <input
-                      size="30"
-                      type="text"
-                      name="LAST_NAME"
-                      value="Иванов"
-                      class="settings__input-text"
-                      id="settings-REGISTER[LAST_NAME]"
-                      placeholder="Фамилия: *"
-                      required=""
-                    />
-                  </label>
-                  <label class="settings__input-wrapper">
-                    <input
-                      size="30"
-                      type="text"
-                      name="NAME"
-                      value="Иван"
-                      class="settings__input-text"
-                      id="settings-REGISTER[NAME]"
-                      placeholder="Имя: *"
-                      required=""
-                    />
-                  </label>
 
-                  <label class="settings__input-wrapper">
+                  <label
+                    class="settings__input-wrapper"
+                    for="settings-username"
+                  >
                     <input
-                      size="30"
-                      type="text"
-                      name="SECOND_NAME"
-                      value="Иванович"
                       class="settings__input-text"
-                      id="settings-REGISTER[SECOND_NAME]"
-                      placeholder="Отчество: "
+                      id="settings-username"
+                      name="User Name"
+                      type="text"
+                      placeholder="Фамилия, Имя, Отчество"
+                      required
                     />
                   </label>
-
-                  <label class="settings__input-wrapper">
+                  <label for="settings-tel" class="settings__input-wrapper">
                     <input
-                      size="30"
-                      type="text"
-                      name="PERSONAL_MOBILE"
-                      value="888888888888888888"
                       class="settings__input-text"
                       id="settings-tel"
+                      name="User phone"
+                      type="tel"
                       placeholder="телефон"
-                      required=""
-                    />
-                  </label>
-
-                  <label class="settings__input-wrapper">
-                    <input
-                      size="30"
-                      type="password"
-                      name="NEW_PASSWORD"
-                      value=""
-                      class="settings__input-text js-password"
-                      placeholder="новый пароль"
-                      autocomplete="off"
-                    />
-                  </label>
-                  <label class="settings__input-wrapper">
-                    <input
-                      size="30"
-                      type="password"
-                      name="NEW_PASSWORD_CONFIRM"
-                      value=""
-                      class="settings__input-text js-password-confirm"
-                      placeholder="подтвердите новый пароль"
-                      autocomplete="off"
+                      required
                     />
                   </label>
                 </div>
@@ -128,10 +74,10 @@
                   <input
                     class="settings__input-text"
                     id="settings-borth-date"
-                    name="PERSONAL_BIRTHDAY"
-                    value="28.10.2020"
+                    name="Borth date"
+                    type="date"
                     inputmode="numeric"
-                    required=""
+                    required
                   />
                   <span class="settings__fake-ph">Дата рождения</span>
                 </label>
@@ -142,11 +88,10 @@
                   <input
                     class="settings__input-text"
                     id="settings-city"
-                    name="WORK_CITY"
-                    value="Москва"
+                    name="City"
                     type="text"
                     placeholder="Город"
-                    required=""
+                    required
                   />
                 </label>
                 <label
@@ -156,12 +101,11 @@
                   <input
                     class="settings__input-text"
                     id="settings-email"
-                    name="EMAIL"
-                    value="11111@vsdfgsd.com"
+                    name="Email"
                     type="text"
                     placeholder="e-mail"
                     inputmode="email"
-                    required=""
+                    required
                   />
                 </label>
               </div>
@@ -176,11 +120,10 @@
                       <input
                         class="settings__input-text"
                         id="settings-main-spec"
-                        name="UF_MAIN_SPEC"
-                        value="Врач основной спецтиальности"
+                        name="Main specialization"
                         type="text"
                         placeholder="Основная специальность"
-                        required=""
+                        required
                       />
                     </label>
                     <label
@@ -190,8 +133,7 @@
                       <input
                         class="settings__input-text"
                         id="settings-add-spec"
-                        name="UF_ADD_SPEC"
-                        value="Врач дополнительной специальности"
+                        name="Additional specialization"
                         type="text"
                         placeholder="Дополнительная специальность"
                       />
@@ -207,11 +149,10 @@
                       <input
                         class="settings__input-text"
                         id="settings-workplace"
-                        name="WORK_COMPANY"
-                        value="НИИ ИИ"
+                        name="Work place"
                         type="text"
                         placeholder="Место работы"
-                        required=""
+                        required
                       />
                     </label>
 
@@ -222,11 +163,10 @@
                       <input
                         class="settings__input-text"
                         id="settings-work-pos"
-                        name="WORK_POSITION"
-                        value="Директор"
+                        name="Work position"
                         type="text"
                         placeholder="Должность"
-                        required=""
+                        required
                       />
                     </label>
 
@@ -237,14 +177,23 @@
                       <input
                         class="settings__input-text"
                         id="settings-work-date"
-                        name="UF_WORK_START_DATE"
-                        value="10.10.2020"
+                        name="Work date"
+                        type="date"
                         placeholder="Даты"
-                        required=""
+                        required
                       />
                     </label>
                   </div>
                 </div>
+
+                <button
+                  class="settings__add-workplace"
+                  type="button"
+                  data-title="Для добавления нажмите на кнопку, для удаления - нажмите правой кнопкой (долгим нажатием - для телефонов)"
+                >
+                  добавить должность
+                </button>
+                <span class="settings__button-hint"></span>
               </div>
 
               <div class="settings__input-row flex">
@@ -255,11 +204,11 @@
                   <input
                     class="settings__input-text"
                     id="settings-insta"
-                    name="UF_INSTAGRAM"
-                    value="https://www.instagram.com/fgdsgfdsgdfsg"
+                    name="Instagram"
                     type="url"
                     inputmode="url"
                     placeholder="Страница Instagram"
+                    required
                   />
                   <span class="settings__sub-ph">*при наличии</span>
                 </label>
@@ -270,11 +219,11 @@
                   <input
                     class="settings__input-text"
                     id="settings-fb"
-                    name="UF_FACEBOOK"
-                    value="https://www.facebook.com/gffgsdgsdf"
+                    name="facebook"
                     type="url"
                     inputmode="url"
                     placeholder="Страница Facebook"
+                    required
                   />
                   <span class="settings__sub-ph">*при наличии</span>
                 </label>
@@ -282,15 +231,14 @@
 
               <div class="settings__input-row flex">
                 <label class="settings__input-wrapper" for="settings-interests">
-                  <textarea
-                    class="settings__comment-field settings__input-text"
+                  <input
+                    class="settings__input-text"
                     id="settings-interests"
-                    name="UF_PREVIEW"
+                    name="Science interests"
+                    type="text"
                     placeholder="Научные интересы"
-                    required=""
-                  >
-Текст для списка. Заполняется только через админку. Текст для списка. Заполняется только через админку. Текст для списка. Заполняется только через админку. Текст для списка. Заполняется только через админку. Текст для списка. Заполняется только через админку. Текст для списка. Заполняется только через админку. Текст для списка. Заполняется только через админку.</textarea
-                  >
+                    required
+                  />
                 </label>
               </div>
 
@@ -299,19 +247,14 @@
                   <textarea
                     class="settings__comment-field settings__input-text"
                     id="settings-comment"
-                    name="UF_INFO"
+                    name="settings comment"
                     placeholder="О себе"
-                  >
-Подолнительные сведения О СЕБЕ заполняются в редактировании пропфиля и в админке. Подолнительные сведения О СЕБЕ заполняются в редактировании пропфиля и в админке. Подолнительные сведения О СЕБЕ заполняются в редактировании пропфиля и в админке. Подолнительные сведения О СЕБЕ заполняются в редактировании пропфиля и в админке.</textarea
-                  >
+                  ></textarea>
                 </label>
               </div>
-              <input
-                type="submit"
-                class="settings__btn blue-btn"
-                name="save"
-                value="отправить"
-              />
+              <button class="settings__btn blue-btn" type="submit">
+                отправить
+              </button>
             </form>
           </div>
         </div>
@@ -324,7 +267,7 @@
       <div class="modal__box">
         @@include('components/_modal-account.html')
         @@include('components/_modal-sign-in.html')
-        @@include('components/_modal-sign-up.html')
+        @@include('components/_modal-reset-password.html')
         @@include('components/_modal-reg.html')
         @@include('components/_modal-settings.html')
       </div>
