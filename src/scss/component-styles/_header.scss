@@ -47,6 +47,21 @@
       fill: $grey-bg-2;
     }
 
+    .icon-list__sign-out {
+      display: block;
+
+      text-align: right;
+
+      color: #fff;
+
+      font-size: 14px;
+      font-weight: 300;
+
+      &:hover {
+        color: $grey-bg-2;
+      }
+    }
+
     .icon-list__item + .icon-list__item {
       margin-left: 21px;
     }

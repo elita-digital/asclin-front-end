@@ -110,92 +110,6 @@
                 </label>
               </div>
 
-              <div class="settings__workplaces-wrapper">
-                <div class="settings__workplace">
-                  <div class="settings__input-row flex">
-                    <label
-                      class="settings__input-wrapper settings__input-wrapper--2"
-                      for="settings-main-spec"
-                    >
-                      <input
-                        class="settings__input-text"
-                        id="settings-main-spec"
-                        name="Main specialization"
-                        type="text"
-                        placeholder="Основная специальность"
-                        required
-                      />
-                    </label>
-                    <label
-                      class="settings__input-wrapper settings__input-wrapper--2 settings__input-wrapper--sub-ph"
-                      for="settings-add-spec"
-                    >
-                      <input
-                        class="settings__input-text"
-                        id="settings-add-spec"
-                        name="Additional specialization"
-                        type="text"
-                        placeholder="Дополнительная специальность"
-                      />
-                      <span class="settings__sub-ph">*при наличии</span>
-                    </label>
-                  </div>
-
-                  <div class="settings__input-row flex">
-                    <label
-                      class="settings__input-wrapper settings__input-wrapper--3"
-                      for="settings-workplace"
-                    >
-                      <input
-                        class="settings__input-text"
-                        id="settings-workplace"
-                        name="Work place"
-                        type="text"
-                        placeholder="Место работы"
-                        required
-                      />
-                    </label>
-
-                    <label
-                      class="settings__input-wrapper settings__input-wrapper--3"
-                      for="settings-work-pos"
-                    >
-                      <input
-                        class="settings__input-text"
-                        id="settings-work-pos"
-                        name="Work position"
-                        type="text"
-                        placeholder="Должность"
-                        required
-                      />
-                    </label>
-
-                    <label
-                      class="settings__input-wrapper settings__input-wrapper--3"
-                      for="settings-work-date"
-                    >
-                      <input
-                        class="settings__input-text"
-                        id="settings-work-date"
-                        name="Work date"
-                        type="date"
-                        placeholder="Даты"
-                        required
-                      />
-                    </label>
-                  </div>
-                </div>
-
-                <button
-                  class="settings__add-workplace"
-                  type="button"
-                  data-title="Для добавления нажмите на кнопку, для удаления - нажмите правой кнопкой (долгим нажатием - для телефонов)"
-                >
-                  добавить должность
-                </button>
-                <span class="settings__button-hint"></span>
-              </div>
-
               <div class="settings__input-row flex">
                 <label
                   class="settings__input-wrapper settings__input-wrapper--2 settings__input-wrapper--sub-ph"
@@ -269,7 +183,6 @@
         @@include('components/_modal-sign-in.html')
         @@include('components/_modal-reset-password.html')
         @@include('components/_modal-reg.html')
-        @@include('components/_modal-settings.html')
       </div>
     </div>
     @@include('components/_footer.html') @@include('components/_scripts.html')

@@ -144,9 +144,7 @@
 
   .registration,
   .settings {
-    &__input-row,
-    .settings__workplace,
-    .settings__workplaces-wrapper {
+    &__input-row {
       flex-wrap: wrap;
     }
   }
@@ -616,12 +614,24 @@
     padding: 0 10px 35px;
   }
 
+  .info-box__col + .info-box__col {
+    margin-left: 10px;
+  }
+
+  .info-box__content {
+    padding: 0;
+  }
+
   .info-box__title {
     font-size: 18px;
   }
 
   .info-box__col--slim {
     flex-basis: 20%;
+  }
+
+  .info-box__col--icon {
+    flex-basis: 25px;
   }
 
   .info-box__row {
@@ -679,10 +689,9 @@
   }
 
   .header__icon-list .icon-list__item--lk {
-    display: flex;
-    align-items: center;
+    display: block;
 
-    width: 60px;
+    width: 70px;
 
     .icon-list__link {
       width: 100%;

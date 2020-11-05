@@ -1,21 +1,27 @@
 .section-title {
-  @extend %h2;
   position: relative;
-  user-select: none;
+
+  margin-top: 50px;
   margin-bottom: 12px;
+
+  user-select: none;
+
+  @extend %h2;
+  @extend %divider;
 
   &__shadow {
     position: absolute;
-    color: $main;
-    left: -10px;
     bottom: 6px;
+    left: -10px;
+
+    user-select: text;
+    text-transform: uppercase;
+
+    color: $main;
+
     font-size: 60px;
     line-height: 73px;
-    text-transform: uppercase;
-    user-select: text;
   }
-
-  @extend %divider;
 
   &::after {
     top: auto;

@@ -1,7 +1,7 @@
 $(function () {
   //ANCHOR: определяем Internet Explorer и задаём свои стили
-  let userAgent = window.navigator.userAgent;
-  let is_ie = /trident/gi.test(userAgent) || /msie/gi.test(userAgent);
+  const userAgent = window.navigator.userAgent;
+  const is_ie = /trident/gi.test(userAgent) || /msie/gi.test(userAgent);
 
   if (is_ie) $("body").addClass("ie-active");
   //!ANCHOR
@@ -9,13 +9,12 @@ $(function () {
   // ANCHOR: функция для открытия модального окна
   // NOTE: весь контент модальных окон открывается в одном окне(блоке). Для вызова модального окна вызывающий элемент должен иметь класс js-modal-call и дата-атрибут data-modal со значением, равным ID обёртки вызываемого контента. Вызываемый контент оборачивается обёрткой с классом modal__content-wrapper. В случае, если заданного ID нет, внутри модального окна появится сообщение об ошибке.
   $(".js-modal-call").click(function () {
-    let $modal = $(this).data("modal");
+    const $modal = $(this).data("modal");
     $("body").addClass("no-scroll");
     $(".modal").fadeIn(260);
     $($modal).siblings().hide();
     $($modal).show();
     $("body *:not(.modal *)").attr("tabindex", -1); //NOTE - запрещает фокус элементов с клавиатуры, находящихся вне модального окна
-    hintCount = sessionStorage.getItem("hintCount");
   });
   // !ANCHOR
 
@@ -55,7 +54,7 @@ $(function () {
   //ANCHOR: функция показа фото при смене в настройках
   $(".settings-user-photo").change(function () {
     if (this.files && this.files[0]) {
-      var reader = new FileReader();
+      const reader = new FileReader();
       reader.onload = function (e) {
         $(".settings__input-wrapper--picture>img").attr("src", e.target.result);
       };
@@ -65,59 +64,12 @@ $(function () {
 
   $(".new-article-pic").change(function () {
     if (this.files && this.files[0]) {
-      var reader = new FileReader();
+      const reader = new FileReader();
       reader.onload = function (e) {
         $(".new-article__image").attr("src", e.target.result);
       };
       reader.readAsDataURL(this.files[0]);
     }
-  });
-  //!ANCHOR
-
-  //ANCHOR: функция добавления/удаления места работы по кнопке и сопотствующее
-  let workCount = 1,
-    hintCount = 0;
-  (hint = $(".settings__button-hint")),
-    $(".settings__add-workplace").click(function () {
-      if (workCount <= 5) {
-        $(".settings__workplace:last-of-type")
-          .clone()
-          .insertBefore($(this))
-          .find($("input"))
-          .val("");
-        workCount++;
-        if (hintCount <= 1) {
-          hint.text($(this).data("title")).show(60);
-        }
-      }
-    });
-
-  $(".settings__add-workplace").on("contextmenu", function (e) {
-    if (workCount > 1) {
-      $(".settings__workplace:last-of-type").remove();
-      workCount--;
-      hintCount++;
-      sessionStorage.setItem("hintCount", hintCount);
-    }
-    return false;
-  });
-
-  $(".settings__add-workplace").on({
-    mouseenter: function () {
-      if (hintCount <= 1) {
-        hint.text($(this).data("title")).show(60);
-      }
-    },
-    mouseleave: function () {
-      hint.hide();
-      hintCount++;
-      sessionStorage.setItem("hintCount", hintCount);
-    },
-  });
-
-  hint.click(function () {
-    hintCount++;
-    sessionStorage.setItem("hintCount", hintCount);
   });
   //!ANCHOR
 
@@ -262,8 +214,8 @@ $(function () {
   });
 
   $(document).mouseup(function (e) {
-    let $targ = $(".header__menu, .header__burger"),
-      maxWidth = window.matchMedia("(max-width: 1023px)").matches;
+    const $targ = $(".header__menu, .header__burger");
+    const maxWidth = window.matchMedia("(max-width: 1023px)").matches;
     if (!$targ.is(e.target) && $targ.has(e.target).length === 0 && maxWidth) {
       $(".header__menu").slideUp(260);
       $(".header__burger-row").removeClass("header__burger-row--open");
@@ -333,6 +285,8 @@ $(function () {
 
   //ANCHOR: ajax forms submit
   $(".ajax-form").submit(function (e) {
+    e.preventDefault();
+
     const errors = [];
 
     const $password = $(this).find(".js-password");
@@ -349,7 +303,6 @@ $(function () {
     }
 
     if (errors.length > 0) {
-      e.preventDefault();
       showMessage(this, errors, "error");
     } else {
       const action = $(this).attr("action");
@@ -357,6 +310,7 @@ $(function () {
       $.ajax({
         type: "POST",
         url: action,
+        dataType: "json",
         data: $(this).serialize(),
         timeout: 3000,
         error: () => {
@@ -382,14 +336,14 @@ $(function () {
   });
 
   /**
-   * @param {HTMLElement} form
+   * @param {jQuery|HTMLElement} form
    * @param {(string|string[]|undefined)} content
    * @param {('success'|'error')} type
    */
   function showMessage(form, content, type = "success") {
     let $container;
 
-    if ($(form).parent("#modal-settings")) {
+    if ($(form).parent("#modal-settings").length > 0) {
       $container = $(form).find(".settings__top-box");
     } else $container = $(form);
 
@@ -397,7 +351,7 @@ $(function () {
     $container.find(".modal__success").remove();
 
     if (content && content.length > 0) {
-      $errorContainer.prepend(generateMessage(content, type));
+      $container.prepend(generateMessage(content, type));
     }
   }
 
@@ -406,17 +360,159 @@ $(function () {
    * @param {('success'|'error')} type
    */
   function generateMessage(content, type = "success") {
-    let message = `<div class="modal__${type}"><p>`;
+    let message = `<div class="modal__${type}">`;
 
     if (Array.isArray(content)) {
       errors.forEach(function (e) {
         message += e + "<br>";
       });
     } else {
-      message = content;
+      message += content;
     }
 
+    message += "<p>";
+
     return message;
+  }
+  //!ANCHOR
+
+  //ANCHOR: workplaces update
+  $(".js-workplace").each(function () {
+    const $container = $(this);
+    const $addButton = $container.find(".settings__add-workplace");
+    const $cancelButton = $container.find(".js-workplace-cancel");
+    const $formWrapper = $container.find(".settings__workplace-wrapper");
+    const $form = $container.find(".settings__workplace");
+    const action = $container.attr("action");
+
+    $addButton.click(function (e) {
+      e.preventDefault();
+
+      showWorkplaceForm({ $container });
+    });
+
+    $container.on("click", ".js-workplace-edit", function (e) {
+      e.preventDefault();
+
+      const $item = $(this).closest(".js-workplace-item");
+      const id = $item.data("id");
+      const data = [];
+      $item.find(".info-box__col[data-name]").each(function () {
+        const name = $(this).data("name");
+        const value = $(this).html();
+
+        data.push({ name, value });
+      });
+
+      showWorkplaceForm({ $container, id, data });
+    });
+
+    $container.on("click", ".js-workplace-remove", function (e) {
+      e.preventDefault();
+
+      const $item = $(this).closest(".js-workplace-item");
+      const id = $item.data("id");
+
+      updateWorkplace({
+        action,
+        TYPE: "DELETE",
+        id,
+        $container: $formWrapper,
+      });
+    });
+
+    $cancelButton.click(function (e) {
+      e.preventDefault();
+
+      hideWorkplaceForm($container);
+    });
+
+    $container.submit(function (e) {
+      e.preventDefault();
+
+      const TYPE = $form.find("input[name=id]").val() == 0 ? "NEW" : "EDIT";
+      const data = {};
+
+      $form.find("input").each(function () {
+        const key = $(this).attr("name");
+        const value = $(this).val();
+
+        data[key] = value;
+      });
+
+      updateWorkplace({
+        action,
+        TYPE,
+        data,
+        $container: $formWrapper,
+      });
+    });
+  });
+
+  /**
+   * @param {object} args
+   * @param {string} args.action
+   * @param {('NEW'|'EDIT'|'DELETE')} args.TYPE
+   * @param {(number|string|undefined)} args.id
+   * @param {object?} args.data
+   * @param {JQuery|HTMLElement} args.$container
+   */
+  function updateWorkplace({ action, TYPE, id, data, $container }) {
+    const $list = $container.find(".js-workplace-list");
+    const $form = $container.find(".settings__workplace");
+
+    $.ajax({
+      type: "POST",
+      url: action,
+      dataType: "json",
+      data: { TYPE, id, ...data },
+      timeout: 3000,
+    })
+      .done(function (result) {
+        $list.html(result.data);
+        hideWorkplaceForm($container);
+      })
+      .fail(function () {
+        showMessage(
+          $form,
+          "Что-то пошло не так! Обновите страницу и попробуйте позже.",
+          "error"
+        );
+      });
+  }
+
+  /**
+   * @param {object} args
+   * @param {jQuery} args.$container
+   * @param {(number|string|undefined)} args.id
+   * @param {object[]?} args.data input'ы в форме будут заполнены значениями из data
+   */
+  function showWorkplaceForm({ $container, id = 0, data = [] }) {
+    const $addButton = $container.find(".settings__add-workplace");
+    const $form = $container.find(".settings__workplace");
+
+    showMessage($container); // Удаление сообщения об ошибке если они есть
+
+    if (data.length > 0) {
+      data.forEach((i) => {
+        $form.find(`input[name=${i.name}]`).val(i.value);
+      });
+    } else {
+      $form.closest("form").trigger("reset");
+    }
+
+    $form.find("input[name=id]").val(id);
+
+    $addButton.removeClass("active");
+    $form.addClass("active");
+  }
+
+  function hideWorkplaceForm($container) {
+    const $addButton = $container.find(".settings__add-workplace");
+    const $form = $container.find(".settings__workplace");
+
+    $form.removeClass("active");
+    $addButton.addClass("active");
   }
   //!ANCHOR
 });

@@ -81,6 +81,21 @@
       flex: 0 0 180px;
     }
 
+    &--icon {
+      display: flex;
+      align-items: center;
+      flex: 0 0 40px;
+      justify-content: center;
+
+      transition: opacity 0.2s ease;
+
+      opacity: 0.7;
+
+      &:hover {
+        opacity: 1;
+      }
+    }
+
     & + & {
       margin-left: 16px;
     }
