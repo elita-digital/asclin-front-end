@@ -2,9 +2,11 @@
   margin-bottom: 55px;
 
   .account {
-    display: block;
-    margin-top: 95px;
     position: relative;
+
+    display: block;
+
+    margin-top: 95px;
 
     &::before {
       top: -56px;
@@ -25,7 +27,6 @@
   }
 
   &__counter-item {
-
     &--like {
       &::before {
         background-image: url(../images/icons/heart.svg);
@@ -57,24 +58,27 @@
     }
   }
 
-
   &__button-box {
     margin-top: 135px;
   }
 
   &__btn-settings {
+    display: table;
+
     margin: 0 30px 0 auto;
-    font-style: italic;
-    font-weight: 600;
-    font-size: 16px;
-    line-height: 1.7;
+
+    cursor: pointer;
     text-decoration: underline;
     text-transform: uppercase;
+
     color: $text;
     border: none;
     background-color: transparent;
-    display: block;
-    cursor: pointer;
+
+    font-size: 16px;
+    font-weight: 600;
+    font-style: italic;
+    line-height: 1.7;
 
     &:hover,
     &:focus {

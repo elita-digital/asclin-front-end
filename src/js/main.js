@@ -417,7 +417,7 @@ $(function () {
         action,
         TYPE: "DELETE",
         id,
-        $container: $formWrapper,
+        $container,
       });
     });
 
@@ -444,7 +444,7 @@ $(function () {
         action,
         TYPE,
         data,
-        $container: $formWrapper,
+        $container,
       });
     });
   });
@@ -515,4 +515,32 @@ $(function () {
     $addButton.addClass("active");
   }
   //!ANCHOR
+
+  tinymce.init({
+    selector: ".new-article__content",
+    menubar: "",
+    toolbar:
+      "undo redo | bold italic underline strikethrough | fontsizeselect formatselect | alignleft aligncenter alignright alignjustify | outdent indent |  numlist bullist checklist | forecolor backcolor casechange removeformat",
+    content_style: `
+      @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap');
+      .mce-content-body { 
+        font-family: Montserrat, Arial, sans-serif;
+        font-size: 20px;
+        line-height: 1.6;
+        margin: 0px 24px;
+      }`,
+    setup: function (editor) {
+      editor.on("change", function () {
+        tinymce.triggerSave();
+      });
+
+      editor.on("focus", function (e) {
+        $(".new-article__input-wrapper--image").addClass("go-back");
+      });
+
+      editor.on("blur", function (e) {
+        $(".new-article__input-wrapper--image").removeClass("go-back");
+      });
+    },
+  });
 });
