@@ -312,6 +312,8 @@ $(function () {
         url: action,
         dataType: "json",
         data: new FormData(this),
+        processData: false,
+        contentType: "multipart/form-data",
         timeout: 3000,
         error: () => {
           showMessage(
