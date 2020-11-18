@@ -6,12 +6,15 @@
   }
 
   &__add {
-    font-style: italic;
-    font-weight: 600;
-    line-height: 1.7;
-    text-decoration-line: underline;
     text-transform: uppercase;
+
     color: $text;
+
+    font-weight: 600;
+    font-style: italic;
+    line-height: 1.7;
+
+    text-decoration-line: underline;
 
     &:hover,
     &:focus {
@@ -22,8 +25,12 @@
   &__item {
     margin-top: 51px;
 
-    &+& {
+    & + & {
       margin-top: 65px;
+    }
+
+    &--gray {
+      background: #e9eaec;
     }
   }
 

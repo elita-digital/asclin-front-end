@@ -311,7 +311,7 @@ $(function () {
         type: "POST",
         url: action,
         dataType: "json",
-        data: $(this).serialize(),
+        data: new FormData(this),
         timeout: 3000,
         error: () => {
           showMessage(
@@ -516,12 +516,13 @@ $(function () {
   }
   //!ANCHOR
 
-  tinymce.init({
-    selector: ".new-article__content",
-    menubar: "",
-    toolbar:
-      "undo redo | bold italic underline strikethrough | fontsizeselect formatselect | alignleft aligncenter alignright alignjustify | outdent indent |  numlist bullist checklist | forecolor backcolor casechange removeformat",
-    content_style: `
+  if ($(".new-article__content").length > 0)
+    tinymce.init({
+      selector: ".new-article__content",
+      menubar: "",
+      toolbar:
+        "undo redo | bold italic underline strikethrough | fontsizeselect formatselect | alignleft aligncenter alignright alignjustify | outdent indent |  numlist bullist checklist | forecolor backcolor casechange removeformat",
+      content_style: `
       @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap');
       .mce-content-body { 
         font-family: Montserrat, Arial, sans-serif;
@@ -529,18 +530,18 @@ $(function () {
         line-height: 1.6;
         margin: 0px 24px;
       }`,
-    setup: function (editor) {
-      editor.on("change", function () {
-        tinymce.triggerSave();
-      });
+      setup: function (editor) {
+        editor.on("change", function () {
+          tinymce.triggerSave();
+        });
 
-      editor.on("focus", function (e) {
-        $(".new-article__input-wrapper--image").addClass("go-back");
-      });
+        editor.on("focus", function (e) {
+          $(".new-article__input-wrapper--image").addClass("go-back");
+        });
 
-      editor.on("blur", function (e) {
-        $(".new-article__input-wrapper--image").removeClass("go-back");
-      });
-    },
-  });
+        editor.on("blur", function (e) {
+          $(".new-article__input-wrapper--image").removeClass("go-back");
+        });
+      },
+    });
 });

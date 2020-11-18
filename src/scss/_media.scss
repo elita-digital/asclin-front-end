@@ -386,7 +386,13 @@
   .new-article__input-wrapper--small {
     flex: 1 1 100%;
 
+    max-width: 100%;
     margin-top: 30px;
+  }
+
+  .new-article .modal__error,
+  .new-article .modal__success {
+    max-width: 100%;
   }
 
   .new-article__btn {
